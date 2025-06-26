@@ -32,7 +32,7 @@ const Index = () => {
           <div className="flex flex-wrap justify-center gap-6 mb-8">
             <div className="flex items-center gap-2">
               <Calendar className="h-5 w-5" />
-              <span>February 7-8, 2026</span>
+              <span>15-17 May, 2026</span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="h-5 w-5" />

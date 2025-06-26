@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,19 +46,35 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex space-x-1 items-center">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  isActive(item.path)
-                    ? "bg-white text-blue-900"
-                    : "text-white"
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              if (item.name === "Program") {
+                return (
+                  <TooltipProvider key={item.name}>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <span className="px-3 py-2 rounded-md text-sm font-medium text-white opacity-60 cursor-not-allowed">{item.name}</span>
+                      </TooltipTrigger>
+                      <TooltipContent side="bottom">
+                        Coming Soon
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                );
+              }
+              return (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    isActive(item.path)
+                      ? "bg-white text-blue-900"
+                      : "text-white"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
             <a
               href="https://cmt3.research.microsoft.com/"
               target="_blank"

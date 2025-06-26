@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -40,7 +39,7 @@ const Program = () => {
       <div className="bg-blue-900 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-4">Conference Program</h1>
-          <p className="text-xl">Detailed schedule for IC2PCT 2024</p>
+          <p className="text-xl">Detailed schedule for IC2PCT 2024 (15-17 May)</p>
         </div>
       </div>
 
@@ -50,9 +49,9 @@ const Program = () => {
             
             <Tabs defaultValue="day1" className="w-full">
               <TabsList className="grid w-full grid-cols-3">
-                <TabsTrigger value="day1">Day 1 - March 15</TabsTrigger>
-                <TabsTrigger value="day2">Day 2 - March 16</TabsTrigger>
-                <TabsTrigger value="day3">Day 3 - March 17</TabsTrigger>
+                <TabsTrigger value="day1">Day 1 - May 15</TabsTrigger>
+                <TabsTrigger value="day2">Day 2 - May 16</TabsTrigger>
+                <TabsTrigger value="day3">Day 3 - May 17</TabsTrigger>
               </TabsList>
 
               <TabsContent value="day1" className="mt-8">

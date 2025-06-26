@@ -13,7 +13,7 @@ const Footer = () => {
             </p>
             <div className="flex items-center gap-2 mb-2">
               <Calendar className="h-4 w-4" />
-              <span className="text-sm">February 7-8 , 2026</span>
+              <span className="text-sm">15-17 May, 2026</span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="h-4 w-4" />

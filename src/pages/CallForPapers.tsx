@@ -100,7 +100,7 @@ const CallForPapers = () => {
       <div className="bg-blue-900 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-4">Call for Papers</h1>
-          <p className="text-xl">Submit your research to IC2PCT 2025</p>
+          <p className="text-xl">Submit your research to IC2PCT 2025 | 15-17 May, 2026</p>
         </div>
       </div>
 
