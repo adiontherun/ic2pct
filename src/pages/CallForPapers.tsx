@@ -100,7 +100,7 @@ const CallForPapers = () => {
       <div className="bg-blue-900 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-4">Call for Papers</h1>
-          <p className="text-xl">Submit your research to IC2PCT 2025 | 15-17 May, 2026</p>
+          <p className="text-xl">Submit your research to 2026 IEEE 6th International Conference on Computing, Power, and Communication Technologies (IC2PCT-2026) | 15-17 May, 2026</p>
         </div>
       </div>
 
@@ -113,7 +113,7 @@ const CallForPapers = () => {
           />
           <h2 className="text-2xl font-bold mb-4 text-gray-800">Download Paper Template</h2>
           <p className="text-gray-600 mb-6">
-            Download the official IEEE paper template for IC2PCT 2025. Please ensure your submission
+            Download the official IEEE paper template for 2026 IEEE 6th International Conference on Computing, Power, and Communication Technologies (IC2PCT-2026). Please ensure your submission
             follows the template format and guidelines.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

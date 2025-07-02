@@ -7,9 +7,9 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Conference Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">IC2PCT 2026</h3>
+            <h3 className="text-xl font-bold mb-4">IC2PCT-2026</h3>
             <p className="text-blue-100 mb-4">
-              International Conference on Innovative Computing and Communication Technologies
+              2026 IEEE 6th International Conference on Computing, Power, and Communication Technologies
             </p>
             <div className="flex items-center gap-2 mb-2">
               <Calendar className="h-4 w-4" />
@@ -57,7 +57,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-blue-800 mt-8 pt-8 text-center text-blue-100">
-          <p>&copy; 2026 IC2PCT International Conference. All rights reserved.</p>
+          <p>&copy; 2026 IEEE 6th International Conference on Computing, Power, and Communication Technologies (IC2PCT-2026). All rights reserved.</p>
         </div>
       </div>
     </footer>

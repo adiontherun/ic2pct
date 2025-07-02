@@ -23,8 +23,8 @@ const Index = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-4">IC2PCT 2026</h1>
-          <h2 className="text-2xl mb-6">International Conference on Innovative Computing and Communication Technologies</h2>
+          <h1 className="text-5xl font-bold mb-4">IC2PCT-2026</h1>
+          <h2 className="text-2xl mb-6">2026 IEEE 6th International Conference on Computing, Power, and Communication Technologies</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Join us for the premier conference bringing together researchers, academicians, and industry professionals
             to share cutting-edge research in computing and communication technologies.
@@ -109,11 +109,11 @@ const Index = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8 text-gray-800">About IC2PCT 2026</h2>
+            <h2 className="text-3xl font-bold mb-8 text-gray-800">About IC2PCT-2026</h2>
             <p className="text-lg text-gray-600 mb-6">
-              The International Conference on Innovative Computing and Communication Technologies (IC2PCT)
+              The 2026 IEEE 6th International Conference on Computing, Power, and Communication Technologies (IC2PCT-2026)
               is a premier forum for researchers, academicians, and industry professionals to present and
-              discuss the most recent innovations, trends, and concerns in the field of computing and
+              discuss the most recent innovations, trends, and concerns in the field of computing, power, and
               communication technologies.
             </p>
             <p className="text-lg text-gray-600 mb-8">
@@ -155,7 +155,7 @@ const Index = () => {
           <p className="text-lg text-gray-700 mb-8">
             The university's School of Computing Science & Engineering is particularly renowned for its
             research contributions in areas such as Artificial Intelligence, Machine Learning, IoT,
-            Cybersecurity, and Data Science - making it the perfect venue for IC2PCT 2026.
+            Cybersecurity, and Data Science - making it the perfect venue for the 2026 IEEE 6th International Conference on Computing, Power, and Communication Technologies (IC2PCT-2026).
           </p>
           <Button asChild size="lg" className="bg-blue-900 hover:bg-blue-800">
             <a

@@ -33,7 +33,7 @@ const ForAuthors = () => {
                 <div className="space-y-6">
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                     <p className="text-blue-800 mb-4">
-                      <strong>Manuscripts for IC2PCT-2025 will ONLY be accepted in electronic format through the Microsoft CMT online submission system:</strong>
+                      <strong>Manuscripts for 2026 IEEE 6th International Conference on Computing, Power, and Communication Technologies (IC2PCT-2026) will ONLY be accepted in electronic format through the Microsoft CMT online submission system:</strong>
                     </p>
                     <Button className="bg-blue-900 hover:bg-blue-800 mb-4">
                       <FileText className="h-4 w-4 mr-2" />
@@ -47,7 +47,7 @@ const ForAuthors = () => {
                   <div>
                     <h4 className="font-semibold mb-3">Manuscript Requirements</h4>
                     <ul className="space-y-2 text-gray-600">
-                      <li>• Authors should only submit originally written, unpublished work to IC2PCT-2025</li>
+                      <li>• Authors should only submit originally written, unpublished work to 2026 IEEE 6th International Conference on Computing, Power, and Communication Technologies (IC2PCT-2026)</li>
                       <li>• Submissions should strictly follow the recommended IEEE Conference Template</li>
                       <li>• All references must follow the IEEE format of citation</li>
                       <li>• Please prefer to limit your paper within 6 pages in PDF format</li>
@@ -95,7 +95,7 @@ const ForAuthors = () => {
                   <div>
                     <h4 className="font-semibold mb-3 text-green-700">Note to Authors</h4>
                     <p className="text-gray-700 mb-4">
-                      Papers submitted to IC2PCT-2025 need to include a quantitative discussion related to why and how the proposed/analysed/discussed technology, concept, process etc. is a significant technical improvement in its area.
+                      Papers submitted to 2026 IEEE 6th International Conference on Computing, Power, and Communication Technologies (IC2PCT-2026) need to include a quantitative discussion related to why and how the proposed/analysed/discussed technology, concept, process etc. is a significant technical improvement in its area.
                     </p>
                   </div>
 
@@ -104,7 +104,7 @@ const ForAuthors = () => {
                     <div className="bg-red-50 border border-red-200 rounded-lg p-4">
                       <ul className="space-y-2 text-red-800">
                         <li>• Papers that are principally cataloguing qualitative or managerial aspects like impact, effect, case-study, rise, journey, study etc. will be insufficient to be accepted</li>
-                        <li>• Submissions focusing only on policy/decision making or economic aspects are unsuitable to be accepted in IC2PCT-2025</li>
+                        <li>• Submissions focusing only on policy/decision making or economic aspects are unsuitable to be accepted in IC2PCT-2026</li>
                         <li>• Short manuscripts/abstracts are not considered</li>
                       </ul>
                     </div>
@@ -130,21 +130,21 @@ const ForAuthors = () => {
               <CardContent>
                 <div className="space-y-6">
                   <p className="text-gray-700">
-                    IC2PCT-2025 authors can select from a variety of approaches for articles that fall within the scope of this conference and IEEE. These article types include, but are not limited to:
+                    2026 IEEE 6th International Conference on Computing, Power, and Communication Technologies (IC2PCT-2026) authors can select from a variety of approaches for articles that fall within the scope of this conference and IEEE. These article types include, but are not limited to:
                   </p>
 
                   <div className="grid md:grid-cols-1 gap-6">
                     <div className="border rounded-lg p-4">
                       <h4 className="font-semibold text-blue-900 mb-3">Original Paper</h4>
                       <p className="text-gray-600 text-sm">
-                        Describes the original work of author(s) in the form of an electronic manuscript, which may include abstract, key words, introduction, problem statement or justification, objective, approach, significance, research questions, limitations, definition of terms, referred or related work, methodology, technically in-depth investigation, details of experimental analysis, result and/or conclusion, further scope of work, references on the topic within the scope of IC2PCT-2025 and IEEE. This may include additional materials, including figures, tables, datasets, pictorial/graphical representations, and videos links.
+                        Describes the original work of author(s) in the form of an electronic manuscript, which may include abstract, key words, introduction, problem statement or justification, objective, approach, significance, research questions, limitations, definition of terms, referred or related work, methodology, technically in-depth investigation, details of experimental analysis, result and/or conclusion, further scope of work, references on the topic within the scope of 2026 IEEE 6th International Conference on Computing, Power, and Communication Technologies (IC2PCT-2026) and IEEE. This may include additional materials, including figures, tables, datasets, pictorial/graphical representations, and videos links.
                       </p>
                     </div>
 
                     <div className="border rounded-lg p-4">
                       <h4 className="font-semibold text-blue-900 mb-3">Review Paper</h4>
                       <p className="text-gray-600 text-sm">
-                        A thorough compilation and succinct summary of research performed on the topic within the scope of IC2PCT-2025 and IEEE, in the form of an electronic manuscript, which may include abstract, key words, introduction, problem statement or justification, objective, approach, significance, research questions, limitations, definition of terms, referred or related work, technically in-depth investigation or comparison, conclusion, pros and cons, proposed scope of further work and references. This may include additional materials, including figures, tables, datasets, pictorial/graphical representations, and video links.
+                        A thorough compilation and succinct summary of research performed on the topic within the scope of 2026 IEEE 6th International Conference on Computing, Power, and Communication Technologies (IC2PCT-2026) and IEEE, in the form of an electronic manuscript, which may include abstract, key words, introduction, problem statement or justification, objective, approach, significance, research questions, limitations, definition of terms, referred or related work, technically in-depth investigation or comparison, conclusion, pros and cons, proposed scope of further work and references. This may include additional materials, including figures, tables, datasets, pictorial/graphical representations, and video links.
                       </p>
                     </div>
                   </div>
@@ -193,7 +193,7 @@ const ForAuthors = () => {
                   <div>
                     <h4 className="font-semibold mb-3">Final Manuscript</h4>
                     <p className="text-gray-600 mb-3">
-                      After the confirmation of the acceptance of the manuscript from IC2PCT-2025, author(s) will have to submit the final version of the manuscript which must include the suggestions/changes as per instructions/improvement mentioned by the Technical Program Committee/Program Committee Members/Reviewers in the comments, if any, in the acceptance notification via email.
+                      After the confirmation of the acceptance of the manuscript from 2026 IEEE 6th International Conference on Computing, Power, and Communication Technologies (IC2PCT-2026), author(s) will have to submit the final version of the manuscript which must include the suggestions/changes as per instructions/improvement mentioned by the Technical Program Committee/Program Committee Members/Reviewers in the comments, if any, in the acceptance notification via email.
                     </p>
                     <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
                       <p className="text-blue-800 text-sm">
@@ -212,7 +212,7 @@ const ForAuthors = () => {
                   <div>
                     <h4 className="font-semibold mb-3">Preprint</h4>
                     <p className="text-gray-600">
-                      The camera-ready-paper is referred to as Preprint, which will be the final version of the manuscript at the end of IC2PCT-2025. The preprint version of the eligible manuscripts will be sent to IEEE for inclusion in IEEE Digital Library. IC2PCT-2025 organizing team will notify the corresponding author/author(s) with preprint copy of the manuscript via email for their consent on the final version.
+                      The camera-ready-paper is referred to as Preprint, which will be the final version of the manuscript at the end of 2026 IEEE 6th International Conference on Computing, Power, and Communication Technologies (IC2PCT-2026). The preprint version of the eligible manuscripts will be sent to IEEE for inclusion in IEEE Digital Library. 2026 IEEE 6th International Conference on Computing, Power, and Communication Technologies (IC2PCT-2026) organizing team will notify the corresponding author/author(s) with preprint copy of the manuscript via email for their consent on the final version.
                     </p>
                   </div>
                 </div>
@@ -248,7 +248,7 @@ const ForAuthors = () => {
                   <div>
                     <h4 className="font-semibold mb-3">Corresponding Author Guidelines</h4>
                     <p className="text-gray-600">
-                      The Corresponding Author is the author who will be doing the e-mail correspondence with IC2PCT-2025, irrespective of the author position in author sequence. The Corresponding Author will solely be responsible for putting the name and details of other authors/co-authors in the submission manuscript. Conference committee explicitly considers that all the authors/co-authors have contributed to the submission and their consent has been taken.
+                      The Corresponding Author is the author who will be doing the e-mail correspondence with 2026 IEEE 6th International Conference on Computing, Power, and Communication Technologies (IC2PCT-2026), irrespective of the author position in author sequence. The Corresponding Author will solely be responsible for putting the name and details of other authors/co-authors in the submission manuscript. Conference committee explicitly considers that all the authors/co-authors have contributed to the submission and their consent has been taken.
                     </p>
                   </div>
 
@@ -278,7 +278,7 @@ const ForAuthors = () => {
                     <div>
                       <h4 className="font-semibold text-yellow-800 mb-2">Important Notice</h4>
                       <p className="text-yellow-700">
-                        After the submission of the manuscripts in IC2PCT-2025, authors will be notified by e-mail(s) only. IC2PCT-2025 will not be held liable for any lapses in e-mail communication, like non-receipt of mail, mail going to junk/spam folder and similar glitches alike.
+                        After the submission of the manuscripts in 2026 IEEE 6th International Conference on Computing, Power, and Communication Technologies (IC2PCT-2026), authors will be notified by e-mail(s) only. 2026 IEEE 6th International Conference on Computing, Power, and Communication Technologies (IC2PCT-2026) will not be held liable for any lapses in e-mail communication, like non-receipt of mail, mail going to junk/spam folder and similar glitches alike.
                       </p>
                     </div>
                   </div>
