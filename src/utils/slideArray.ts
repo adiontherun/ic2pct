@@ -137,7 +137,7 @@ export interface Card {
     {
       name: "Dr. Sunita Yadav",
       position: "Professor",
-      organization: "National University of Singapore",
+      organization: "Galgotias University, India",
       imgSrc: "/ImportantPersons/sunita.jpeg",
     },
     {
