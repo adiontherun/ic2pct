@@ -12,9 +12,10 @@ const logos = [
   '/logos/WIE.png',
   '/logos/CS.png',
   '/logos/IAS.png',
-  '/logos/CIS.png',
-  '/logos/TEMS.png',
-  '/logos/SSIT.png',
+  '/logos/ES.png'
+  // '/logos/CIS.png',
+  // '/logos/TEMS.png',
+  // '/logos/SSIT.png',
 ];
 
 export default function LogoCarousel() {
