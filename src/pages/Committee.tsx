@@ -27,7 +27,7 @@ export default function TeamPage(): JSX.Element {
     "Conference General Chair": [
       "Prof.(Dr.) Avadhesh Kumar",
       "Dr. Yogesh S. Chauhan",
-      "Prof.(Dr.) Akshay Rathore"
+      "Dr. Arnold Pears"
     ],
     "Conference Chair": [
       "Dr. Aanjey M. Tripathi",

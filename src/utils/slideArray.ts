@@ -752,5 +752,11 @@ export interface Card {
       name: "Ayman EL-Refaie",
       position: "IAS President 2025-2026, Professor",
       organization: "Dept. of Electrical and Computer Engineering, Marquette University, Milwaukee, WI",
+    },
+    {
+      name: "Dr. Arnold Pears",
+      position: "Professor",
+      organization: "Department of Learning in Engineering Sciences, KTH Royal Institute of Technology, Sweden",
+      imgSrc: "/ImportantPersons/ap.jpg",
     }
   ];
