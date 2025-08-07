@@ -147,9 +147,9 @@ export default function TeamPage(): JSX.Element {
       // "Hemendra Harsh",
       // "Shivam Kumar"
     ],
-    "Media Chairs": [
-      "Prof. AR Pandey"
-    ],
+    // "Media Chairs": [
+    //   "Prof. AR Pandey"
+    // ],
     // "Hospitality Chairs": [
     //   "Prof. (Dr.) Rajiv Mishra",
     //   // "Dr. Vandana Beniwal"
