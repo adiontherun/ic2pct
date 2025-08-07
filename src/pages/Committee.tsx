@@ -97,7 +97,6 @@ export default function TeamPage(): JSX.Element {
       "Prof.(Dr.) Akshay Rathore",
       "Dr. Liudong Xing",
       "Ayman EL-Refaie",
-      "Dr. Aditya Nath Bhatt"
     ],
 
     "Sponsorship & Industry Chairs": [
@@ -223,13 +222,13 @@ export default function TeamPage(): JSX.Element {
                         <img
                           src={chair.imgSrc}
                           alt={name}
-                          className="w-32 h-32 p-5 mx-auto rounded-full border-4 border-white shadow-md"
+                          className="w-32 h-32 mx-auto rounded-full border-4 border-white shadow-md object-cover"
                         />
                       ) : (
                         <img
                           src='/reshot-icon-user-ZXFJAEQURK.svg'
                           alt={name}
-                          className="w-32 h-32 p-5 mx-auto rounded-full border-4 border-black shadow-md invert"
+                          className="w-32 h-32 p-5 mx-auto rounded-full border-4 border-white shadow-md invert"
                         />
                       )}
                       <h2 className="text-xl font-bold mt-4">{name}</h2>
