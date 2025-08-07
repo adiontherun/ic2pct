@@ -73,7 +73,7 @@ export default function TeamPage(): JSX.Element {
     ],
     "Event Organising Chair": [
 
-      "Dr. Pragya Tewari",
+      // "Dr. Pragya Tewari",
       "Dr. Ambika Gupta",
       "Dr. Pooja Singh"
     ],
