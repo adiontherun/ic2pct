@@ -22,7 +22,7 @@ export default function TeamPage(): JSX.Element {
       "Dr. S.N.Singh",
       "Prof.(Dr.) K.M. Babu",
       "Ms. Aradhana Galgotia",
-      
+
     ],
     "Conference General Chair": [
       "Prof.(Dr.) Avadhesh Kumar",
@@ -55,8 +55,8 @@ export default function TeamPage(): JSX.Element {
     ],
     "Publication Chairs": [
       "Prof. Shraddha Sagar"
-      
-     
+
+
     ],
     "Publicity Chairs": [
       "Dr. Ravi Sharma"
@@ -64,18 +64,18 @@ export default function TeamPage(): JSX.Element {
     "Conference Secretaries": [
       "Dr. K. K. Agrawal",
       "Dr. Ajeet Singh",
-      
+
       "Prof. Arunendra Mani Tripathi",
       // "Prof. Avneesh Kumar",
       "Dr. Shachi Mall"
     ],
     "Event Organising Chair": [
-      
+
       "Dr. Pragya Tewari",
       "Dr. Ambika Gupta",
       "Dr. Pooja Singh"
     ],
-    
+
     "Conference Technical Co-Chairs": [
       // "Prof. Ravi Sharma",
       "Ms. Trapti Shrivastava",
@@ -89,21 +89,22 @@ export default function TeamPage(): JSX.Element {
       "Prof. Avneesh Kumar",
       // "Prof. E. Rajesh"
     ],
-    
-    
-    "International Advisory Chairs": [
-      // "Prof. Sanjeev K. Singh",
-      // "Prof. N. Partheeban",
-      "Dr. Aditya Nath Bhatt",
-    //  "Prof. (Dr.) S Srinivasan"
 
+
+    "International Advisory Chairs": [
+      "Dr. Hironori Washizaki",
+      "Dr. Dipti Srinivasan",
+      "Prof.(Dr.) Akshay Rathore",
+      "Dr. Liudong Xing",
+      "Ayman EL-Refaie",
+      "Dr. Aditya Nath Bhatt"
     ],
-    
+
     "Sponsorship & Industry Chairs": [
       "Prof. Avneesh Kumar",
       // "Dr. V.D.S. Baghela"
     ],
-    
+
     "Finance Chairs": [
       "Prof. Ashok K. Yadav"
     ],
@@ -183,21 +184,21 @@ export default function TeamPage(): JSX.Element {
     ],
     "Technical Program Committee": [
       "Dr. Arvind Kumar",
-    "Prof. V. Krishna Rao Kandanvli",
-    "Prof. P. Karuppanan",
-    "Dr. Dharmendra Dixit",
-    "Dr. Deepak Punetha",
-    "Dr. Arun Kumar Saurabh",
-    "Prof. Navdeep Singh",
-    "Dr. Nirmal Ch Roy",
-    "Prof. Priya Matta",
-    "Prof. Alok Katiyar",
-    "Prof. Dilip Yadav",
-    "Prof. SPS Chauhan",
-    "Prof. Vandana Sharma",
-    "Dr. Shailesh Kumar",
-    "Dr. Swapnita Srivastava",
-    "Dr. Vipul Narayan"
+      "Prof. V. Krishna Rao Kandanvli",
+      "Prof. P. Karuppanan",
+      "Dr. Dharmendra Dixit",
+      "Dr. Deepak Punetha",
+      "Dr. Arun Kumar Saurabh",
+      "Prof. Navdeep Singh",
+      "Dr. Nirmal Ch Roy",
+      "Prof. Priya Matta",
+      "Prof. Alok Katiyar",
+      "Prof. Dilip Yadav",
+      "Prof. SPS Chauhan",
+      "Prof. Vandana Sharma",
+      "Dr. Shailesh Kumar",
+      "Dr. Swapnita Srivastava",
+      "Dr. Vipul Narayan"
     ]
   };
 

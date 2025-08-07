@@ -747,5 +747,10 @@ export interface Card {
       position: "Professor, BTKIT Dwarahat",
       organization: "Joint Secretary, IEEE UP Section",
       imgSrc: "/ImportantPersons/varunkakar.jpg",
+    },
+    {
+      name: "Ayman EL-Refaie",
+      position: "IAS President 2025-2026, Professor",
+      organization: "Dept. of Electrical and Computer Engineering, Marquette University, Milwaukee, WI",
     }
   ];
