@@ -788,5 +788,10 @@ export interface Card {
       position: "Associate Professor",
       organization: "B.M.S. College of Engineering, Bengaluru, India",
       imgSrc: "/ImportantPersons/abhishek.jpg",
+    },
+    {
+      name: "Rajesh Elangovan",
+      position: "Professor",
+      organization: "Alliance University, Bangalore",
     }
   ];

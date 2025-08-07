@@ -190,7 +190,8 @@ export default function TeamPage(): JSX.Element {
       "Prof. N. Gayathri",
       "Prof. S. Rakesh Kumar",
       "Prof. Anoop Kumar Patel",
-      "Dr. P.S. Yadav"
+      "Dr. P.S. Yadav",
+      "Rajesh Elangovan"
     ],
     "Technical Program Committee": [
       "Dr. Arvind Kumar",
