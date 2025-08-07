@@ -150,10 +150,10 @@ export default function TeamPage(): JSX.Element {
     "Media Chairs": [
       "Prof. AR Pandey"
     ],
-    "Hospitality Chairs": [
-      "Prof. (Dr.) Rajiv Mishra",
-      // "Dr. Vandana Beniwal"
-    ],
+    // "Hospitality Chairs": [
+    //   "Prof. (Dr.) Rajiv Mishra",
+    //   // "Dr. Vandana Beniwal"
+    // ],
 
     "International Advisory Committee": [
       "Dr. Hironori Washizaki",
