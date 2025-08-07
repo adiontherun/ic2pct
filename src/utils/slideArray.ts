@@ -756,7 +756,7 @@ export interface Card {
     },
     {
       name: "Dr. Arnold Pears",
-      position: "Professor",
+      position: "President IEEE Education Society, Professor",
       organization: "Department of Learning in Engineering Sciences, KTH Royal Institute of Technology, Sweden",
       imgSrc: "/ImportantPersons/ap.jpg",
     },
@@ -773,14 +773,20 @@ export interface Card {
     },
     {
       name: "Dr. Diane Rover",
-      position: "Professor",
+      position: "President-Elect IEEE Education Society, Professor",
       organization: "Department of Electrical and Computer Engineering, Iowa State University",
       imgSrc: "/ImportantPersons/rower.jpg",
     },
     {
       name: "Dr. Diana Andone",
-      position: "Director",
+      position: "VP for Conferences & Workshops IEEE Education Society, Director",
       organization: "Digital Education and Distance Education Department, Politehnica University of Timisoara, Romania",
       imgSrc: "/ImportantPersons/diana.jpg",
+    },
+    {
+      name: "Abhishek Appaji",
+      position: "Associate Professor",
+      organization: "B.M.S. College of Engineering, Bengaluru, India",
+      imgSrc: "/ImportantPersons/abhishek.jpg",
     }
   ];

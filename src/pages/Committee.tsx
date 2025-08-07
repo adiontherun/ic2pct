@@ -102,6 +102,11 @@ export default function TeamPage(): JSX.Element {
       "Dr. Diana Andone",
     ],
 
+    "National Advisory Chair": [
+      "Dr. Harivardhagini Subhadra",
+      "Abhishek Appaji"
+    ],
+
     "Sponsorship & Industry Chairs": [
       "Prof. Avneesh Kumar",
       // "Dr. V.D.S. Baghela"
@@ -158,7 +163,6 @@ export default function TeamPage(): JSX.Element {
       "Prof. Jagjit Singh Dhatterwal"
     ],
     "National Advisory Committee": [
-      "Dr. Harivardhagini Subhadra",
       "Prof. Adarsh Anand",
       "Prof. (Dr.) Chandra Prakash",
       "Prof. (Dr.) Sahil",
