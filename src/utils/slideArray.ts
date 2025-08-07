@@ -776,5 +776,11 @@ export interface Card {
       position: "Professor",
       organization: "Department of Electrical and Computer Engineering, Iowa State University",
       imgSrc: "/ImportantPersons/rower.jpg",
+    },
+    {
+      name: "Dr. Diana Andone",
+      position: "Director",
+      organization: "Digital Education and Distance Education Department, Politehnica University of Timisoara, Romania",
+      imgSrc: "/ImportantPersons/diana.jpg",
     }
   ];

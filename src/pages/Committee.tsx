@@ -99,6 +99,7 @@ export default function TeamPage(): JSX.Element {
       "Dr. Liudong Xing",
       "Ayman EL-Refaie",
       "Dr. Diane Rover",
+      "Dr. Diana Andone",
     ],
 
     "Sponsorship & Industry Chairs": [
