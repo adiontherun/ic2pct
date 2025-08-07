@@ -793,5 +793,55 @@ export interface Card {
       name: "Rajesh Elangovan",
       position: "Professor",
       organization: "Alliance University, Bangalore",
+    },
+    {
+      name: "Dr. Gokul Rajan Venkatachalam",
+      position: "Associate Professor",
+      organization: "Alliance University, Bangalore",
+    },
+    {
+      name: "Mr. Vivek Kumar Jaiswal",
+      position: "Assistant Professor, IT Department",
+      organization: "Rajkiya Engineering College Bijnor",
+    },
+    {
+      name: "Dr. Balamurugan Balusamy",
+      position: "Associate Dean Academics",
+      organization: "Shiv Nadar University, India",
+    },
+    {
+      name: "Dr. Amrendra Singh Yadav",
+      position: "Assistant Professor",
+      organization: "ABV-Indian Institute of Information Technology & Management Gwalior, India",
+    },
+    {
+      name: "Dr. Prakash Singh",
+      position: "Assistant Professor & Head of Department-CSE",
+      organization: "REC Mainpuri",
+    },
+    {
+      name: "Dr. D.P. Vidyarthi",
+      position: "Professor",
+      organization: "School of Computer & Systems Sciences, JNU, Delhi, India",
+    },
+    {
+      name: "Dr. Ratneshwer",
+      position: "Professor",
+      organization: "School of Computer & Systems Sciences, JNU, Delhi, India",
+    },
+    {
+      name: "Dr. Ankit Jaiswal",
+      position: "Professor",
+      organization: "School of Computer & Systems Sciences, JNU, Delhi, India",
+    },
+    {
+      name: "Dr. Chetan Arora",
+      position: "Professor",
+      organization: "Computer Science & Engineering, IIT, Delhi, India",
+    },
+    {
+      name: "Dr. Anurag Singh",
+      position: "Associate Professor",
+      organization: "Computer Science & Engineering, NIT Delhi, India",
     }
   ];

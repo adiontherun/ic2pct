@@ -122,7 +122,7 @@ export default function TeamPage(): JSX.Element {
     ],
 
 
-    
+
 
     "National Advisory Chair": [
       "Dr. Harivardhagini Subhadra",
@@ -164,7 +164,7 @@ export default function TeamPage(): JSX.Element {
       "Dr. Diane Rover",
       "Dr. Diana Andone",
     ],
-    
+
     "National Advisory Committee": [
       "Prof. Adarsh Anand",
       "Prof. (Dr.) Chandra Prakash",
@@ -191,7 +191,17 @@ export default function TeamPage(): JSX.Element {
       "Prof. S. Rakesh Kumar",
       "Prof. Anoop Kumar Patel",
       "Dr. P.S. Yadav",
-      "Rajesh Elangovan"
+      "Rajesh Elangovan",
+      "Dr. Gokul Rajan Venkatachalam",
+      "Mr. Vivek Kumar Jaiswal",
+      "Dr. Balamurugan Balusamy",
+      "Dr. Amrendra Singh Yadav",
+      "Dr. Prakash Singh",
+      "Dr. D.P. Vidyarthi",
+      "Dr. Ratneshwer",
+      "Dr. Ankit Jaiswal",
+      "Dr. Chetan Arora",
+      "Dr. Anurag Singh"
     ],
     "Technical Program Committee": [
       "Dr. Arvind Kumar",
