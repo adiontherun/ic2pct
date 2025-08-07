@@ -90,17 +90,39 @@ export default function TeamPage(): JSX.Element {
       "Prof. Avneesh Kumar",
       // "Prof. E. Rajesh"
     ],
-
-
     "International Advisory Chairs": [
-      "Dr. Hironori Washizaki",
-      "Dr. Dipti Srinivasan",
-      "Prof.(Dr.) Akshay Rathore",
-      "Dr. Liudong Xing",
-      "Ayman EL-Refaie",
-      "Dr. Diane Rover",
-      "Dr. Diana Andone",
+      // "Dr. Liudong Xing",
+      // "Dr. LING Tok Wang",
+      // "Dr. Norjihan Abdul Ghani",
+      // "Dr. Norbik Bashah Bin Idris",
+      // "Dr. Maizatul Akmar Ismail",
+      // "Dr. Suzan Jabbar Obaiys",
+      // "Dr. Mufti Mahmud",
+      // "Dr. Deepak K Jain",
+      // "Dr. Kishore Bingi",
+      // "Dr. Noor Zaman Jhanjhi",
+      // "Dr. CHAMAN VERMA",
+      // "Dr. Manoj Kumar",
+      // "Dr. Sachidanand Mohanty",
+      // "Dr. S.B.Goyal",
+      // "Dr. Nagender Aneja",
+      // "Dr. Pradeep Kumar",
+      // "Dr. Mukesh Prasad",
+      // "Dr. Gavendra Singh",
+      // "Dr. Hoang Pham",
+      // "Dr. Nitin Kumar Saxena",
+      // "Prof. Utkal Mehta",
+      // "Dr. Shafiq Ul Rehman",
+      // "Prof. Mohammad Rashid Hussain",
+      // "Prof. Deepak L. Waikar",
+      // // "Prof. E. Rajesh",
+      // "Prof.(Dr.) Akshay Rathore"
+      "Prof. Sanjeev K. Singh",
+      "Prof. Jagjit Singh Dhatterwal"
     ],
+
+
+    
 
     "National Advisory Chair": [
       "Dr. Harivardhagini Subhadra",
@@ -132,36 +154,17 @@ export default function TeamPage(): JSX.Element {
       "Prof. (Dr.) Rajiv Mishra",
       // "Dr. Vandana Beniwal"
     ],
+
     "International Advisory Committee": [
-      // "Dr. Liudong Xing",
-      // "Dr. LING Tok Wang",
-      // "Dr. Norjihan Abdul Ghani",
-      // "Dr. Norbik Bashah Bin Idris",
-      // "Dr. Maizatul Akmar Ismail",
-      // "Dr. Suzan Jabbar Obaiys",
-      // "Dr. Mufti Mahmud",
-      // "Dr. Deepak K Jain",
-      // "Dr. Kishore Bingi",
-      // "Dr. Noor Zaman Jhanjhi",
-      // "Dr. CHAMAN VERMA",
-      // "Dr. Manoj Kumar",
-      // "Dr. Sachidanand Mohanty",
-      // "Dr. S.B.Goyal",
-      // "Dr. Nagender Aneja",
-      // "Dr. Pradeep Kumar",
-      // "Dr. Mukesh Prasad",
-      // "Dr. Gavendra Singh",
-      // "Dr. Hoang Pham",
-      // "Dr. Nitin Kumar Saxena",
-      // "Prof. Utkal Mehta",
-      // "Dr. Shafiq Ul Rehman",
-      // "Prof. Mohammad Rashid Hussain",
-      // "Prof. Deepak L. Waikar",
-      // // "Prof. E. Rajesh",
-      // "Prof.(Dr.) Akshay Rathore"
-      "Prof. Sanjeev K. Singh",
-      "Prof. Jagjit Singh Dhatterwal"
+      "Dr. Hironori Washizaki",
+      "Dr. Dipti Srinivasan",
+      "Prof.(Dr.) Akshay Rathore",
+      "Dr. Liudong Xing",
+      "Ayman EL-Refaie",
+      "Dr. Diane Rover",
+      "Dr. Diana Andone",
     ],
+    
     "National Advisory Committee": [
       "Prof. Adarsh Anand",
       "Prof. (Dr.) Chandra Prakash",
