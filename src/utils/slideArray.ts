@@ -752,6 +752,7 @@ export interface Card {
       name: "Ayman EL-Refaie",
       position: "IAS President 2025-2026, Professor",
       organization: "Dept. of Electrical and Computer Engineering, Marquette University, Milwaukee, WI",
+      imgSrc: "/ImportantPersons/aer.jpg",
     },
     {
       name: "Dr. Arnold Pears",
@@ -763,5 +764,11 @@ export interface Card {
       name: "Dr. Saurabh Singh",
       position: "Professor",
       organization: "Galgotias University, India",
+    },
+    {
+      name: "Dr. Sonia Setia",
+      position: "Professor",
+      organization: "Galgotias University, India",
+      imgSrc: "/ImportantPersons/sonia.jpg",
     }
   ];

@@ -49,6 +49,8 @@ export default function TeamPage(): JSX.Element {
     ],
     "Conference Technical Chair": [
       "Dr. Saurabh Singh",
+      "Dr. Sonia Setia",
+      "Ms. Trapti Shrivastava",
       // "Dr. Kuldeep S. Kaswan"
       "Dr. Vineeta Khemchandani"
       // "Prof. Manish Kumar"
@@ -78,7 +80,6 @@ export default function TeamPage(): JSX.Element {
 
     "Conference Technical Co-Chairs": [
       // "Prof. Ravi Sharma",
-      "Ms. Trapti Shrivastava",
       // "Dr. Manish Kumar",
       // "Dr. Sonu Jha",
       "Dr. Smita"
