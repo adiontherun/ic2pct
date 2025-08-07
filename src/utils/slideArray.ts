@@ -758,5 +758,10 @@ export interface Card {
       position: "Professor",
       organization: "Department of Learning in Engineering Sciences, KTH Royal Institute of Technology, Sweden",
       imgSrc: "/ImportantPersons/ap.jpg",
+    },
+    {
+      name: "Dr. Saurabh Singh",
+      position: "Professor",
+      organization: "Galgotias University, India",
     }
   ];

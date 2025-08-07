@@ -48,7 +48,7 @@ export default function TeamPage(): JSX.Element {
       "Prof. Sunil Bharti"
     ],
     "Conference Technical Chair": [
-      "Dr. Sunita Yadav",
+      "Dr. Saurabh Singh",
       // "Dr. Kuldeep S. Kaswan"
       "Dr. Vineeta Khemchandani"
       // "Prof. Manish Kumar"
