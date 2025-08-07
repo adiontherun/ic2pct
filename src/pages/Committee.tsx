@@ -158,6 +158,7 @@ export default function TeamPage(): JSX.Element {
       "Prof. Jagjit Singh Dhatterwal"
     ],
     "National Advisory Committee": [
+      "Dr. Harivardhagini Subhadra",
       "Prof. Adarsh Anand",
       "Prof. (Dr.) Chandra Prakash",
       "Prof. (Dr.) Sahil",
