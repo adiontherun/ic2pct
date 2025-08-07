@@ -76,14 +76,14 @@ export default function TeamPage(): JSX.Element {
       // "Dr. Pragya Tewari",
       "Dr. Ambika Gupta",
       "Dr. Pooja Singh"
-    ],
+    ]
 
-    "Conference Technical Co-Chairs": [
-      // "Prof. Ravi Sharma",
-      // "Dr. Manish Kumar",
-      // "Dr. Sonu Jha",
-      "Dr. Smita"
-    ],
+    // "Conference Technical Co-Chairs": [
+    //   // "Prof. Ravi Sharma",
+    //   // "Dr. Manish Kumar",
+    //   // "Dr. Sonu Jha",
+    //   "Dr. Smita"
+    ,
     "Publication Co-Chairs": [
       // "Dr. Shachi Mall",
       "Dr. Vipin Rai",
@@ -98,6 +98,7 @@ export default function TeamPage(): JSX.Element {
       "Prof.(Dr.) Akshay Rathore",
       "Dr. Liudong Xing",
       "Ayman EL-Refaie",
+      "Dr. Diane Rover",
     ],
 
     "Sponsorship & Industry Chairs": [

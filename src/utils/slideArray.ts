@@ -770,5 +770,11 @@ export interface Card {
       position: "Professor",
       organization: "Galgotias University, India",
       imgSrc: "/ImportantPersons/sonia.jpg",
+    },
+    {
+      name: "Dr. Diane Rover",
+      position: "Professor",
+      organization: "Department of Electrical and Computer Engineering, Iowa State University",
+      imgSrc: "/ImportantPersons/rower.jpg",
     }
   ];
