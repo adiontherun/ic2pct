@@ -843,5 +843,16 @@ export interface Card {
       name: "Dr. Anurag Singh",
       position: "Associate Professor",
       organization: "Computer Science & Engineering, NIT Delhi, India",
+    },
+    {
+      name: "Prof. (Dr.) Geeta Sikka",
+      position: "Professor",
+      organization: "Department of Computer Science & Engineering, NIT Delhi",
+      imgSrc: "/ImportantPersons/geeta.webp",
+    },
+    {
+      name: "Dr. Vimal Kumar",
+      position: "Professor",
+      organization: "School of Computer Science & Engineering, MMMUT, Gorakhpur, India",
     }
   ];

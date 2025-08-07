@@ -118,7 +118,8 @@ export default function TeamPage(): JSX.Element {
       // // "Prof. E. Rajesh",
       // "Prof.(Dr.) Akshay Rathore"
       "Prof. Sanjeev K. Singh",
-      "Prof. Jagjit Singh Dhatterwal"
+      "Prof. Jagjit Singh Dhatterwal",
+      "Prof.(Dr.) Akshay Rathore"
     ],
 
 
@@ -126,7 +127,9 @@ export default function TeamPage(): JSX.Element {
 
     "National Advisory Chair": [
       "Dr. Harivardhagini Subhadra",
-      "Abhishek Appaji"
+      "Abhishek Appaji",
+      "Prof. (Dr.) Geeta Sikka",
+      "Dr. Vimal Kumar"
     ],
 
     "Sponsorship & Industry Chairs": [
@@ -158,7 +161,6 @@ export default function TeamPage(): JSX.Element {
     "International Advisory Committee": [
       "Dr. Hironori Washizaki",
       "Dr. Dipti Srinivasan",
-      "Prof.(Dr.) Akshay Rathore",
       "Dr. Liudong Xing",
       "Ayman EL-Refaie",
       "Dr. Diane Rover",
