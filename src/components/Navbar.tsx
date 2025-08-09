@@ -1,21 +1,27 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isCommitteeDropdownOpen, setIsCommitteeDropdownOpen] = useState(false);
   const location = useLocation();
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "Call for Papers", path: "/call-for-papers" },
-    { name: "Committee", path: "/committee" },
+    { 
+      name: "Committee", 
+      path: "/committee",
+      dropdown: [
+        { name: "Members", path: "/committee" },
+        { name: "Speakers", path: "/speakers" }
+      ]
+    },
     { name: "Program", path: "/program" },
-    { name: "For Authors", path: "/for-authors" },
+    { name: "Guidelines", path: "/for-authors" },
     { name: "Registration", path: "/registration" },
-    { name: "Speakers", path: "/speakers" },
     { name: "Conferences", path: "/conferences" },
   ];
 
@@ -61,6 +67,47 @@ const Navbar = () => {
                   </TooltipProvider>
                 );
               }
+              
+              if (item.dropdown) {
+                return (
+                  <div 
+                    key={item.name} 
+                    className="relative"
+                    onMouseEnter={() => setIsCommitteeDropdownOpen(true)}
+                    onMouseLeave={() => setIsCommitteeDropdownOpen(false)}
+                  >
+                    <button
+                      className={`px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center space-x-1 ${
+                        isActive(item.path) || isActive("/speakers")
+                          ? "bg-white text-blue-900"
+                          : "text-white hover:bg-blue-800"
+                      }`}
+                    >
+                      <span>{item.name}</span>
+                      <ChevronDown className="h-4 w-4" />
+                    </button>
+                    
+                    {isCommitteeDropdownOpen && (
+                      <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg border border-gray-200 z-50">
+                        {item.dropdown.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            to={dropdownItem.path}
+                            className={`block px-4 py-2 text-sm transition-colors first:rounded-t-md last:rounded-b-md ${
+                              isActive(dropdownItem.path)
+                                ? "bg-blue-900 text-white"
+                                : "text-gray-700 hover:bg-gray-100"
+                            }`}
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+              
               return (
                 <Link
                   key={item.name}
@@ -68,7 +115,7 @@ const Navbar = () => {
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     isActive(item.path)
                       ? "bg-white text-blue-900"
-                      : "text-white"
+                      : "text-white hover:bg-blue-800"
                   }`}
                 >
                   {item.name}
@@ -104,20 +151,46 @@ const Navbar = () => {
         {isOpen && (
           <div className="lg:hidden pb-4">
             <div className="flex flex-col space-y-2">
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    isActive(item.path)
-                      ? "bg-blue-900 text-white"
-                      : "text-white hover:text-blue-900 hover:bg-blue-50"
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {navItems.map((item) => {
+                if (item.dropdown) {
+                  return (
+                    <div key={item.name} className="space-y-1">
+                      <div className="px-3 py-2 text-sm font-medium text-white border-b border-blue-800">
+                        {item.name}
+                      </div>
+                      {item.dropdown.map((dropdownItem) => (
+                        <Link
+                          key={dropdownItem.name}
+                          to={dropdownItem.path}
+                          className={`block px-6 py-2 rounded-md text-sm font-medium transition-colors ${
+                            isActive(dropdownItem.path)
+                              ? "bg-white text-blue-900"
+                              : "text-white hover:text-blue-900 hover:bg-blue-50"
+                          }`}
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {dropdownItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  );
+                }
+                
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.path}
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                      isActive(item.path)
+                        ? "bg-white text-blue-900"
+                        : "text-white hover:text-blue-900 hover:bg-blue-50"
+                    }`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                );
+              })}
             </div>
           </div>
         )}

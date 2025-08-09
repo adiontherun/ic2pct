@@ -5,7 +5,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import CallForPapers from "./pages/CallForPapers";
 import Committee from "./pages/Committee";
 import Program from "./pages/Program";
 import ForAuthors from "./pages/ForAuthors";

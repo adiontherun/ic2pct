@@ -58,46 +58,31 @@ const Index = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Conference Highlights</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center">
-              <CardHeader>
-                <CardTitle className="text-blue-900">Important Dates</CardTitle>
+          <div className="max-w-4xl mx-auto">
+            <Card className="bg-white shadow-lg border-0">
+              <CardHeader className="text-center pb-6">
+                <CardTitle className="text-2xl text-blue-900 flex items-center justify-center gap-3">
+                  <Calendar className="h-6 w-6" />
+                  Important Dates
+                </CardTitle>
+                <CardDescription className="text-gray-600">
+                  Mark your calendar for these key conference milestones
+                </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="space-y-2">
-                  <p><strong>Paper Submission:</strong> Will update</p>
-                  <p><strong>Review Results:</strong> Will update</p>
-                  <p><strong>Final Submission:</strong> Will update</p>
-                  <p><strong>Registration Deadline:</strong> Will update</p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardHeader>
-                <CardTitle className="text-blue-900">Conference Tracks</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  <p>• Computing</p>
-                  <p>• Communication</p>
-                  
-                  <p>• Power</p>
-                 
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardHeader>
-                <CardTitle className="text-blue-900">Publication</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  <p>Selected papers will be published in:</p>
-                  <p><strong>IEEE Digital Library</strong></p>
-                  <p><strong>Scopus Indexed</strong></p>
-                  <p><strong>Conference Proceedings</strong></p>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-900">
+                    <h4 className="font-semibold text-blue-900 mb-2">Paper Submission Deadline</h4>
+                    <p className="text-gray-700 text-lg">Will update</p>
+                  </div>
+                  <div className="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500">
+                    <h4 className="font-semibold text-orange-700 mb-2">Final Submission Deadline</h4>
+                    <p className="text-gray-700 text-lg">Will update</p>
+                  </div>
+                  <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-600">
+                    <h4 className="font-semibold text-purple-700 mb-2">Registration Deadline</h4>
+                    <p className="text-gray-700 text-lg">Will update</p>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -124,6 +109,112 @@ const Index = () => {
             <Button asChild size="lg" className="bg-blue-900 hover:bg-blue-800">
               <Link to="/call-for-papers">Learn More</Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Conference Tracks */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Conference Tracks</h2>
+          <p className="text-center text-lg text-gray-600 mb-12">
+            We welcome submissions in the following areas. 
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Track 1: Computing */}
+            <Card className="h-full">
+              <CardHeader>
+                <CardTitle className="text-blue-900">Track 1: Computing</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-gray-600 text-sm">
+                  <li>• Big Data, Cloud Computing, and Quantum Computing</li>
+                  <li>• AI, AIoT, IIoT, Deep Learning, and Machine Learning</li>
+                  <li>• Cyber Security and Humanitarian Technologies</li>
+                  <li>• Blockchain Applications</li>
+                  <li>• AR, VR, and Metaverse</li>
+                  <li>• Human-Computer Interface (HCI)</li>
+                  <li>• Robotics, UAV, and Unmanned Vehicle Technologies</li>
+                  <li>• Smart Manufacturing and Industry 5.0</li>
+                  <li>• Healthcare Applications</li>
+                  <li>• Cyber Physical Systems</li>
+                  <li>• Software Engineering and Agile Development</li>
+                  <li>• Multimedia and Web Services Agents</li>
+                  <li>• Knowledge-based Systems</li>
+                  <li>• Pervasive Computing and Ambient Intelligence</li>
+                  <li>• Bioinformatics</li>
+                  <li>• Heuristic and AI Planning Strategies and Tools</li>
+                  <li>• Computational Theories of Learning</li>
+                  <li>• Recent Trends and Developments</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Track 2: Power */}
+            <Card className="h-full">
+              <CardHeader>
+                <CardTitle className="text-blue-900">Track 2: Power</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-gray-600 text-sm">
+                  <li>• Renewable Energy Technologies Including Hydrogen</li>
+                  <li>• Renewable Energy Technologies (e.g., Solar, Wind, Hydro, Biomass)</li>
+                  <li>• Integration of Renewable Energy Sources into the Grid</li>
+                  <li>• Energy Storage Systems (e.g., Batteries, Supercapacitors, Flywheels)</li>
+                  <li>• Energy Efficiency and Conservation Strategies</li>
+                  <li>• Demand Response and Load Management</li>
+                  <li>• Modern Power Electronics, Drives and Control, Electric Vehicles</li>
+                  <li>• Electric Vehicles and Charging Infrastructure</li>
+                  <li>• Power Semiconductor Devices and Applications</li>
+                  <li>• Smart Grid Technologies and Power System Management</li>
+                  <li>• Power System Modeling and Simulation</li>
+                  <li>• Electric Power Generation and Distribution</li>
+                  <li>• Power System Optimization and Smart Metering</li>
+                  <li>• Distributed Generation and Microgrids</li>
+                  <li>• High Voltage Engineering and Insulation Systems</li>
+                  <li>• Power Quality and Reliability</li>
+                  <li>• Advanced Power System Protection and Control</li>
+                  <li>• Power System Management Technologies</li>
+                  <li>• Power System Cybersecurity</li>
+                  <li>• Artificial Intelligence for Power Systems and Smart Grid</li>
+                  <li>• Smart Cities & Technologies for Sustainable Development</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Track 3: Communication */}
+            <Card className="h-full">
+              <CardHeader>
+                <CardTitle className="text-blue-900">Track 3: Communication</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-gray-600 text-sm">
+                  <li>• Antennas and Propagation</li>
+                  <li>• Radio Frequency and Microwave Engineering</li>
+                  <li>• Optical Communication and Fiber Optics</li>
+                  <li>• Satellite Communication Systems</li>
+                  <li>• Wireless/Radio Access Technologies</li>
+                  <li>• 5G Applications, Emerging 6G Technologies</li>
+                  <li>• Mobile Communication and Network Architecture</li>
+                  <li>• Communication Networks and Protocols</li>
+                  <li>• Ad Hoc and Sensor Networks</li>
+                  <li>• Wireless Sensor Networks</li>
+                  <li>• Machine-to-Machine (M2M) Communication</li>
+                  <li>• Multi-Access Edge Computing (MEC) and Cloud RAN</li>
+                  <li>• Signal Processing for Communications</li>
+                  <li>• Data Transmission and Coding Techniques</li>
+                  <li>• Internet of Things (IoT)</li>
+                  <li>• IoT Hardware Security</li>
+                  <li>• Healthcare and Wireless Sensor Networks</li>
+                  <li>• Network Security and Privacy</li>
+                  <li>• Communication System Design and Optimization</li>
+                  <li>• Communication in Smart Cities and Smart Grids</li>
+                  <li>• Ubiquitous Computing and Communication</li>
+                  <li>• Interference Management and Spectrum Sharing</li>
+                  <li>• Communication for Autonomous Systems and Vehicles</li>
+                </ul>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
