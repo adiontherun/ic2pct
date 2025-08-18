@@ -118,7 +118,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Conference Tracks</h2>
           <p className="text-center text-lg text-gray-600 mb-12">
-            We welcome submissions in the following areas. 
+            We welcome submissions in the following areas.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             {/* Track 1: Computing */}
@@ -219,58 +219,58 @@ const Index = () => {
         </div>
       </section>
 
-     <section className="relative py-16 overflow-hidden">
-  {/* Background image layer with reduced opacity */}
-  <div
-    className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
-    style={{ backgroundImage: "url('https://www.galgotiasuniversity.edu.in/public/uploads/media/ZE6Pp0UjcqM3YePbTNhicYhR1rGh2DpcnSgKbFMH.webp')", opacity: 0.3 }}
-  />
+      <section className="relative py-16 overflow-hidden">
+        {/* Background image layer with reduced opacity */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
+          style={{ backgroundImage: "url('https://www.galgotiasuniversity.edu.in/public/uploads/media/ZE6Pp0UjcqM3YePbTNhicYhR1rGh2DpcnSgKbFMH.webp')", opacity: 0.3 }}
+        />
 
-  {/* Foreground content stays fully visible */}
-  <div className="relative z-10">
-    <div className="container mx-auto px-4">
-      <div className="grid lg:grid-cols-2 gap-12 items-center justify-between">
-        {/* Text content on left */}
-        <div> 
-          <h2 className="text-3xl font-bold mb-6 text-gray-800">About Galgotias University</h2>
-          <p className="text-lg text-gray-700 mb-6">
-            Galgotias University is a leading private university in India, established in 2011 and located in
-            Greater Noida, Uttar Pradesh. Known for its state-of-the-art infrastructure and commitment to
-            academic excellence, the university offers world-class education across various disciplines.
-          </p>
-          <p className="text-lg text-gray-700 mb-6">
-            With over 20,000+ students from 50+ countries, Galgotias University has established itself as a
-            global education hub. The university is equipped with modern laboratories, research facilities,
-            and industry partnerships that provide students with hands-on experience and exposure to cutting-edge technologies.
-          </p>
-          <p className="text-lg text-gray-700 mb-8">
-            The university's School of Computing Science & Engineering is particularly renowned for its
-            research contributions in areas such as Artificial Intelligence, Machine Learning, IoT,
-            Cybersecurity, and Data Science - making it the perfect venue for the 2026 IEEE 6th International Conference on Computing, Power, and Communication Technologies (IC2PCT-2026).
-          </p>
-          <Button asChild size="lg" className="bg-blue-900 hover:bg-blue-800">
-            <a
-              href="https://www.galgotiasuniversity.edu.in/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Visit University Website
-            </a>
-          </Button>
-        </div>
+        {/* Foreground content stays fully visible */}
+        <div className="relative z-10">
+          <div className="container mx-auto px-4">
+            <div className="grid lg:grid-cols-2 gap-12 items-center justify-between">
+              {/* Text content on left */}
+              <div>
+                <h2 className="text-3xl font-bold mb-6 text-gray-800">About Galgotias University</h2>
+                <p className="text-lg text-gray-700 mb-6">
+                  Galgotias University is a leading private university in India, established in 2011 and located in
+                  Greater Noida, Uttar Pradesh. Known for its state-of-the-art infrastructure and commitment to
+                  academic excellence, the university offers world-class education across various disciplines.
+                </p>
+                <p className="text-lg text-gray-700 mb-6">
+                  With over 20,000+ students from 50+ countries, Galgotias University has established itself as a
+                  global education hub. The university is equipped with modern laboratories, research facilities,
+                  and industry partnerships that provide students with hands-on experience and exposure to cutting-edge technologies.
+                </p>
+                <p className="text-lg text-gray-700 mb-8">
+                  The university's School of Computing Science & Engineering is particularly renowned for its
+                  research contributions in areas such as Artificial Intelligence, Machine Learning, IoT,
+                  Cybersecurity, and Data Science - making it the perfect venue for the 2026 IEEE 6th International Conference on Computing, Power, and Communication Technologies (IC2PCT-2026).
+                </p>
+                <Button asChild size="lg" className="bg-blue-900 hover:bg-blue-800">
+                  <a
+                    href="https://www.galgotiasuniversity.edu.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit University Website
+                  </a>
+                </Button>
+              </div>
 
-        {/* Campus image on right */}
-        <div className="order-first lg:order-last">
-          <img
-            src="https://www.galgotiasuniversity.edu.in/public/uploads/media/ZE6Pp0UjcqM3YePbTNhicYhR1rGh2DpcnSgKbFMH.webp"
-            alt="Galgotias University Campus"
-            className="w-full h-auto rounded-lg shadow-lg"
-          />
+              {/* Campus image on right */}
+              <div className="order-first lg:order-last">
+                <img
+                  src="https://www.galgotiasuniversity.edu.in/public/uploads/media/ZE6Pp0UjcqM3YePbTNhicYhR1rGh2DpcnSgKbFMH.webp"
+                  alt="Galgotias University Campus"
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
 
       <div>
