@@ -36,7 +36,7 @@ export default function TeamPage(): JSX.Element {
       // "Prof. Asheesh Kumar Singh"
     ],
     "Conference Organizing Chair": [
-      "Dr. Vimal Kumar",
+      
       "Dr. Gaurav Agarwal",
       "Dr. Abdul Aleem",
       "Prof. Manish Kumar",
@@ -187,6 +187,7 @@ export default function TeamPage(): JSX.Element {
       "Dr. Vimal Kumar Singh Yadav",
       "Prof. Karuna Kadian",
       "Dr. Satish Chandra",
+      "Dr. Vimal Kumar",
       "Dr. Savita Yadav",
       "Prof. Anurag Diwedi",
       "Prof. N. Gayathri",
