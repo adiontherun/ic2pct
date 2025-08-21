@@ -10,15 +10,8 @@ const Acknowledgement = () => {
               ACKNOWLEDGEMENT
             </h2>
             <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-              The{' '}
-              <a 
-                href="https://cmt3.research.microsoft.com/" 
-                className="text-blue-600 hover:text-blue-800 underline font-medium transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Microsoft CMT service
-              </a>{' '}
+              The Microsoft CMT service
+              
               was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
             </p>
           </div>
