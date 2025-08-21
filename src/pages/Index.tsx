@@ -8,6 +8,7 @@ import ImageSlider from "@/components/ImageSlider";
 import UniversityMap from "@/components/UniversityMap";
 import CountdownTimer from "@/components/CountdownTimer";
 import LogoCarousel from '@/components/LogoCarousel';
+import Acknowledgement from '@/components/Acknowledgement';
 
 const Index = () => {
   return (
@@ -276,6 +277,9 @@ const Index = () => {
       <div>
         <LogoCarousel />
       </div>
+
+      {/* Acknowledgement Section */}
+      <Acknowledgement />
 
       {/* University Location Map */}
       <section className="py-16">
