@@ -71,18 +71,22 @@ const Index = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                   <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-900">
-                    <h4 className="font-semibold text-blue-900 mb-2">Paper Submission Deadline</h4>
-                    <p className="text-gray-700 text-lg">Will update</p>
+                    <h4 className="font-semibold text-blue-900 mb-2">Abstract Submission Deadline</h4>
+                    <p className="text-gray-700 text-lg">02 January 2026</p>
+                  </div>
+                  <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-600">
+                    <h4 className="font-semibold text-green-700 mb-2">Full Paper Submission Deadline</h4>
+                    <p className="text-gray-700 text-lg">31 March 2026</p>
                   </div>
                   <div className="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500">
-                    <h4 className="font-semibold text-orange-700 mb-2">Final Submission Deadline</h4>
-                    <p className="text-gray-700 text-lg">Will update</p>
+                    <h4 className="font-semibold text-orange-700 mb-2">Acceptance Notification</h4>
+                    <p className="text-gray-700 text-lg">15 April 2026</p>
                   </div>
                   <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-600">
-                    <h4 className="font-semibold text-purple-700 mb-2">Registration Deadline</h4>
-                    <p className="text-gray-700 text-lg">Will update</p>
+                    <h4 className="font-semibold text-purple-700 mb-2">Final Paper Submission</h4>
+                    <p className="text-gray-700 text-lg">30 April 2026</p>
                   </div>
                 </div>
               </CardContent>
