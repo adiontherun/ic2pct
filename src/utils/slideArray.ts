@@ -160,7 +160,7 @@ export interface Card {
     },
     {
       name: "Dr. Arpesh Singh",
-      position: "Professor",
+      position: "",
       organization: "Galgotias University, India",
       imgSrc: "/ImportantPersons/arpesh.jpg",
     },
