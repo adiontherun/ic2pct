@@ -5,7 +5,9 @@ const Acknowledgement = () => {
         <div className="max-w-4xl mx-auto">
           <div className="bg-white border border-gray-200 rounded-lg shadow-lg p-6 md:p-8">
             <h2 className="text-2xl font-bold text-blue-900 border-b-2 border-blue-900 pb-3 mb-6">
-              CMT ACKNOWLEDGEMENT
+              <a href="/cmt-acknowledgment.html" className="hover:text-blue-700 transition-colors">
+                CMT ACKNOWLEDGEMENT
+              </a>
             </h2>
 
             {/* CMT requires this exact text to be visible and scannable */}
