@@ -8,42 +8,61 @@ const Page: React.FC = () => {
       <Navbar />
       <main className="flex-1 flex flex-col items-center py-10 px-4 w-full">
         <h1 className="text-3xl font-bold text-blue-900 mb-6">Registration Rates</h1>
-        {/* Responsive table container */}
+
+        {/* Unified Registration Table */}
         <div className="w-full max-w-6xl bg-white shadow-md rounded-lg overflow-hidden mb-8">
           <div className="overflow-x-auto">
             <table className="w-full border border-blue-900 text-center">
               <thead>
                 <tr className="bg-blue-900 text-white">
+                  <th className="p-3 border border-blue-900">Presentation Mode</th>
                   <th className="p-3 border border-blue-900">Registration Type</th>
-                  <th className="p-3 border border-blue-900">Country of Registration</th>
+                  <th className="p-3 border border-blue-900">Country</th>
                   <th className="p-3 border border-blue-900">IEEE Member</th>
                   <th className="p-3 border border-blue-900">Non-IEEE Member</th>
                 </tr>
               </thead>
               <tbody className="text-blue-900">
-                <tr className="bg-blue-50">
-                  <td className="p-3 border border-blue-900">Regular Author</td>
+                {/* Online Registration Section */}
+                <tr className="bg-blue-100">
+                  <td className="p-3 border border-blue-900 font-bold text-blue-800" rowSpan={3}>ONLINE</td>
+                  <td className="p-3 border border-blue-900">Regular/Industry</td>
                   <td className="p-3 border border-blue-900">Indian / Foreigner</td>
-                  <td className="p-3 border border-blue-900">7,000 INR / 350 USD</td>
-                  <td className="p-3 border border-blue-900">9,000 INR / 400 USD</td>
+                  <td className="p-3 border border-blue-900">₹9,500 / 350 USD</td>
+                  <td className="p-3 border border-blue-900">₹10,620 / 400 USD</td>
                 </tr>
-                <tr className="bg-white">
+                <tr className="bg-blue-50">
                   <td className="p-3 border border-blue-900">Student Author</td>
                   <td className="p-3 border border-blue-900">Indian / Foreigner</td>
-                  <td className="p-3 border border-blue-900">5,000 INR / 200 USD</td>
-                  <td className="p-3 border border-blue-900">6,500 INR / 300 USD</td>
+                  <td className="p-3 border border-blue-900">₹7,080 / 200 USD</td>
+                  <td className="p-3 border border-blue-900">₹8,260 / 300 USD</td>
                 </tr>
-                <tr className="bg-blue-50">
-                  <td className="p-3 border border-blue-900">Industry</td>
-                  <td className="p-3 border border-blue-900">Indian / Foreigner</td>
-                  <td className="p-3 border border-blue-900">8,000 INR / 350 USD</td>
-                  <td className="p-3 border border-blue-900">10,000 INR / 400 USD</td>
-                </tr>
-                <tr className="bg-white">
+                <tr className="bg-blue-100">
                   <td className="p-3 border border-blue-900">Attendee</td>
                   <td className="p-3 border border-blue-900">Indian / Foreigner</td>
-                  <td className="p-3 border border-blue-900">4,000 INR / 200 USD</td>
-                  <td className="p-3 border border-blue-900">6,500 INR / 350 USD</td>
+                  <td className="p-3 border border-blue-900">2,500 INR / 100 USD</td>
+                  <td className="p-3 border border-blue-900">3,500 INR / 150 USD</td>
+                </tr>
+
+                {/* Offline Registration Section */}
+                <tr className="bg-green-100">
+                  <td className="p-3 border border-blue-900 font-bold text-green-700" rowSpan={3}>OFFLINE</td>
+                  <td className="p-3 border border-blue-900">Regular/Industry</td>
+                  <td className="p-3 border border-blue-900">Indian / Foreigner</td>
+                  <td className="p-3 border border-blue-900">₹7,080 / 200 USD</td>
+                  <td className="p-3 border border-blue-900">₹8,260 / 250 USD</td>
+                </tr>
+                <tr className="bg-green-50">
+                  <td className="p-3 border border-blue-900">Student Author</td>
+                  <td className="p-3 border border-blue-900">Indian / Foreigner</td>
+                  <td className="p-3 border border-blue-900">₹5,500 / 150 USD</td>
+                  <td className="p-3 border border-blue-900">₹6,500 / 175 USD</td>
+                </tr>
+                <tr className="bg-green-100">
+                  <td className="p-3 border border-blue-900">Attendee</td>
+                  <td className="p-3 border border-blue-900">Indian / Foreigner</td>
+                  <td className="p-3 border border-blue-900">₹1000 / 100 USD</td>
+                  <td className="p-3 border border-blue-900">₹1500 / 125 USD</td>
                 </tr>
               </tbody>
             </table>

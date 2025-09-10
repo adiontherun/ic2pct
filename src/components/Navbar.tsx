@@ -123,7 +123,7 @@ const Navbar = () => {
               );
             })}
             <a
-              href="https://cmt3.research.microsoft.com/"
+              href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FICCPCT2026%2FSubmission%2FIndex"
               target="_blank"
               rel="noopener noreferrer"
               className="ml-4 px-4 py-2 rounded-full bg-white text-blue-900 font-semibold shadow hover:bg-blue-100 transition-colors border border-white"
