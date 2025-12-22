@@ -35,7 +35,7 @@ const CountdownTimer = () => {
     <section className="bg-blue-50 py-16">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl font-bold mb-8 text-gray-800">Conference Countdown</h2>
-        
+
         <div className="flex flex-wrap justify-center gap-6">
           <div className="bg-white rounded-lg shadow-lg p-6 min-w-[120px]">
             <div className="text-3xl font-bold text-blue-900">{timeLeft.days}</div>

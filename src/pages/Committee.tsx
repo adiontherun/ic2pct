@@ -2,171 +2,132 @@ import { cards } from "@/utils/slideArray";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-// Define types
-interface Chair {
-  name: string;
-  imgSrc?: string;
-  position: string;
-  organization: string;
-}
-
-interface Roles {
-  [key: string]: string[];
-}
-
-export default function TeamPage(): JSX.Element {
-  const roles: Roles = {
-    "Chief Patron": ["Shri Suneel Galgotia"],
-    "Patrons": [
+export default function TeamPage() {
+  const roles = {
+    "Chief Patron": [
+      "Shri Suneel Galgotia"
+    ],
+    "Patron": [
       "Dr. Dhruv Galgotia",
-      "Dr. S.N.Singh",
-      "Prof.(Dr.) K.M. Babu",
       "Ms. Aradhana Galgotia",
-
+      "Dr. Ankush Mittal",
+      "Prof. (Dr.) S.N.Singh"
     ],
     "Conference General Chair": [
-      "Prof.(Dr.) Avadhesh Kumar",
-      "Dr. Yogesh S. Chauhan",
+      "Prof. (Dr.) Avadhesh Kumar",
+      "Prof. (Dr.) Yogesh S. Chauhan",
       "Dr. Arnold Pears"
     ],
     "Conference Chair": [
-      "Dr. Aanjey M. Tripathi",
-      // "Prof. Prashant Johri",
-      "Dr. Kuldeep S. Kaswan"
-      // "Prof. Asheesh Kumar Singh"
+      "Prof. (Dr.) Aanjey M. Tripathi",
+      "Prof. (Dr.) Kuldeep S. Kaswan"
     ],
     "Conference Organizing Chair": [
-      
-      "Dr. Gaurav Agarwal",
-      "Dr. Abdul Aleem",
+      "Prof. (Dr.) Harish Kumar GR",
+      "Prof. (Dr.) Abdul Aleem",
+      "Prof. (Dr.) Gaurav Agarwal",
       "Prof. Manish Kumar",
-      "Dr. Arpesh Singh"
+      "Prof. Arpesh Singh"
     ],
-    "Conference Co-Organizing Chairs": [
-      // "Prof. Meenakshi Awasthi",
-      // "Prof. Deepak Soni",
-      "Prof. Sunil Bharti"
+    "Conference Co-Organizing Chair": [
+      "Prof. (Dr.) Sunil Bharti"
     ],
-    "Conference Technical Chair": [
-      "Dr. Saurabh Singh",
-      "Dr. Sonia Setia",
-      "Ms. Trapti Shrivastava",
-      // "Dr. Kuldeep S. Kaswan"
-      "Dr. Vineeta Khemchandani"
-      // "Prof. Manish Kumar"
+    "Technical Program Committee Chair": [
+      "Prof. (Dr.) Vineeta Khemchandani",
+      "Prof. (Dr.) Sudhir Kr. Singh",
+      "Prof. (Dr.) Deepak Soni",
+      "Prof. (Dr.) Sonia Setia"
     ],
-    "Publication Chairs": [
-      "Prof. Shraddha Sagar"
-
-
+    "Publication Chair": [
+      "Prof. (Dr.) Shrddha Sagar"
     ],
-    "Publicity Chairs": [
-      "Dr. Ravi Sharma"
+    "Publicity Chair": [
+      "Prof. (Dr.) Meenakshi Sharma",
+      "Prof. (Dr.) Ravi Sharma"
     ],
-    "Conference Secretaries": [
-      "Dr. K. K. Agrawal",
-      "Dr. Ajeet Singh",
-
-      "Prof. Arunendra Mani Tripathi",
-      // "Prof. Avneesh Kumar",
-      "Dr. Shachi Mall"
+    "Conference Secretary": [
+      "Prof. (Dr.) Manish Raj",
+      "Prof. (Dr.) Ajeet Singh",
+      "Prof. (Dr.) Saurabh Singh",
+      "Prof. (Dr.) K. K. Agrawal",
+      "Prof. (Dr.) Shachi Mall",
+      "Prof. Arunendra Mani Tripathi"
     ],
     "Event Organising Chair": [
-
-      // "Dr. Pragya Tewari",
-      "Dr. Ambika Gupta",
-      "Dr. Pooja Singh"
-    ]
-
-    // "Conference Technical Co-Chairs": [
-    //   // "Prof. Ravi Sharma",
-    //   // "Dr. Manish Kumar",
-    //   // "Dr. Sonu Jha",
-    //   "Dr. Smita"
-    ,
-    "Publication Co-Chairs": [
-      // "Dr. Shachi Mall",
-      "Dr. Vipin Rai",
-      "Prof. Avneesh Kumar",
-      // "Prof. E. Rajesh"
+      "Prof. (Dr.) Pooja Singh",
+      "Prof. Pragya Tewari"
     ],
-    "International Advisory Chairs": [
-      // "Dr. Liudong Xing",
-      // "Dr. LING Tok Wang",
-      // "Dr. Norjihan Abdul Ghani",
-      // "Dr. Norbik Bashah Bin Idris",
-      // "Dr. Maizatul Akmar Ismail",
-      // "Dr. Suzan Jabbar Obaiys",
-      // "Dr. Mufti Mahmud",
-      // "Dr. Deepak K Jain",
-      // "Dr. Kishore Bingi",
-      // "Dr. Noor Zaman Jhanjhi",
-      // "Dr. CHAMAN VERMA",
-      // "Dr. Manoj Kumar",
-      // "Dr. Sachidanand Mohanty",
-      // "Dr. S.B.Goyal",
-      // "Dr. Nagender Aneja",
-      // "Dr. Pradeep Kumar",
-      // "Dr. Mukesh Prasad",
-      // "Dr. Gavendra Singh",
-      // "Dr. Hoang Pham",
-      // "Dr. Nitin Kumar Saxena",
-      // "Prof. Utkal Mehta",
-      // "Dr. Shafiq Ul Rehman",
-      // "Prof. Mohammad Rashid Hussain",
-      // "Prof. Deepak L. Waikar",
-      // // "Prof. E. Rajesh",
-      // "Prof.(Dr.) Akshay Rathore"
-      "Prof. Sanjeev K. Singh",
-      "Prof. Jagjit Singh Dhatterwal",
-      "Prof.(Dr.) Akshay Rathore"
+    "Conference Technical Co-Chair": [
+      "Prof. (Dr.) Anupam Baliyan",
+      "Prof. (Dr.) Trapti Shrivastava",
+      "Prof. (Dr.) Shipra Shukla",
+      "Prof. Jitendra"
     ],
-
-
-
-
+    "Publication Co-Chair": [
+      "Prof. (Dr.) Shashi Bhusan",
+      "Prof. (Dr.) Vipin Rai"
+    ],
+    "International Advisory Chair": [
+      "Prof. (Dr.) Sanjeev K. Singh",
+      "Prof. (Dr.) Jagjit Singh Dhatterwal"
+    ],
     "National Advisory Chair": [
-      "Dr. Harivardhagini Subhadra",
-      "Abhishek Appaji",
       "Prof. (Dr.) Geeta Sikka",
-      "Dr. Vimal Kumar"
+      "Prof. (Dr.) Abhishek Appaji",
+      "Prof. (Dr.) Harivardhagini Subhadra"
     ],
-
-    "Sponsorship & Industry Chairs": [
-      "Prof. Avneesh Kumar",
-      // "Dr. V.D.S. Baghela"
+    "Sponsorship & Industry Chair": [
+      "Prof. (Dr.) Avneesh Kumar"
     ],
-
-    "Finance Chairs": [
-      "Prof. Ashok K. Yadav"
+    "Finance Chair": [
+      "Prof. (Dr.) Ashok K. Yadav"
     ],
-    "Transport Chairs": [
-      "Prof. T. Ganesh Kumar"
+    "Transport Chair": [
+      "Prof. (Dr.) Ganesh Kumar",
+      "Prof. (Dr.) Dinesh Kumar"
     ],
-    "Website & Graphics Chairs": [
+    "Website & Graphics Chair": [
       "Mr. Pankaj Lamba",
-      "Manas Saxena",
-      // "Ayush Raj",
-      // "Hemendra Harsh",
-      // "Shivam Kumar"
+      "Mr. Gaurang Pant"
     ],
-    // "Media Chairs": [
-    //   "Prof. AR Pandey"
-    // ],
-    // "Hospitality Chairs": [
-    //   "Prof. (Dr.) Rajiv Mishra",
-    //   // "Dr. Vandana Beniwal"
-    // ],
-
+    "Media Chair": [
+      "Prof. (Dr.) Neha Jindal"
+    ],
+    "Hospitality Chair": [
+      "Prof. (Dr.) Shankar Kumar"
+    ],
     "International Advisory Committee": [
-      "Dr. Hironori Washizaki",
-      "Dr. Dipti Srinivasan",
       "Dr. Liudong Xing",
-      "Ayman EL-Refaie",
-      "Dr. Diane Rover",
-      "Dr. Diana Andone",
+      "Dr. LING Tok Wang",
+      "Dr. Norjihan Abdul Ghani",
+      "Dr. Norbik Bashah Bin Idris",
+      "Dr. Maizatul Akmar Ismail",
+      "Dr. Suzan Jabbar Obaiys",
+      "Dr. Mufti Mahmud",
+      "Dr. Deepak K Jain",
+      "Dr. Kishore Bingi",
+      "Dr. Noor Zaman Jhanjhi",
+      "Dr. CHAMAN VERMA",
+      "Dr. Manoj Kumar",
+      "Dr. Sachidanand Mohanty",
+      "Dr. S.B.Goyal",
+      "Dr. Nagender Aneja",
+      "Dr. Pradeep Kumar",
+      "Dr. Mukesh Prasad",
+      "Dr. Gavendra Singh",
+      "Dr. Hoang Pham",
+      "Dr. Nitin Kumar Saxena",
+      "Prof. Utkal Mehta",
+      "Dr. Shafiq Ul Rehman",
+      "Prof. Mohammad Rashid Hussain",
+      "Prof. Deepak L. Waikar",
+      "Chin Kuan Ho",
+      "Dr. Sivaneasan Bala Krishnan",
+      "Prof. Ts. Dr. Murali Raman",
+      "Dr. Ahmed A. Elngar",
+      "Dr. Hironori Washizaki",
+      "Dr. Supavadee Aramvith"
     ],
-
     "National Advisory Committee": [
       "Prof. Adarsh Anand",
       "Prof. (Dr.) Chandra Prakash",
@@ -181,32 +142,36 @@ export default function TeamPage(): JSX.Element {
       "Dr. Dushyant Kumar Singh",
       "Prof. Nidhi Goel",
       "Prof. S. K. Srivastava",
+      "Prof. (Dr.) Vimal Kumar",
       "Prof. Vandana Niranjan",
       "Prof. SRN Reddy",
       "Prof. Bhawna Narwal",
       "Dr. Vimal Kumar Singh Yadav",
       "Prof. Karuna Kadian",
       "Dr. Satish Chandra",
-      "Dr. Vimal Kumar",
+      "Prof. Anil Kumar Sagar",
+      "Professor T. G. Sitharam",
+      "Dr. Sri Niwas Singh",
+      "Dr. J. Ramkumar",
+      "Dr. Rajeev Kumar Singh",
+      "Dr. Varun Kakar",
+      "Dr. Mohammad Rihan",
+      "Dr Bijaya Ketan Panigrahi",
+      "Dr. Brij B. Gupta",
+      "Dr. Vinay Kumar",
       "Dr. Savita Yadav",
       "Prof. Anurag Diwedi",
-      "Prof. N. Gayathri",
-      "Prof. S. Rakesh Kumar",
+      "Prof. Deependra Rastogi",
+      "Prof. N.Gayathri",
+      "Prof. S.Rakesh Kumar",
       "Prof. Anoop Kumar Patel",
+      "Prof. R.P. Yadav",
+      "Prof. (Dr.) S Srinivasan",
+      "Dr. V.D.S. Baghela",
       "Dr. P.S. Yadav",
-      "Rajesh Elangovan",
-      "Dr. Gokul Rajan Venkatachalam",
-      "Mr. Vivek Kumar Jaiswal",
-      "Dr. Balamurugan Balusamy",
-      "Dr. Amrendra Singh Yadav",
-      "Dr. Prakash Singh",
-      "Dr. D.P. Vidyarthi",
-      "Dr. Ratneshwer",
-      "Dr. Ankit Jaiswal",
-      "Dr. Chetan Arora",
-      "Dr. Anurag Singh"
-    ],
-    "Technical Program Committee": [
+      "Dr. Shailesh Kumar",
+      "Dr. Swapnita Srivastava",
+      "Dr. Vipul Narayan",
       "Dr. Arvind Kumar",
       "Prof. V. Krishna Rao Kandanvli",
       "Prof. P. Karuppanan",
@@ -220,9 +185,12 @@ export default function TeamPage(): JSX.Element {
       "Prof. Dilip Yadav",
       "Prof. SPS Chauhan",
       "Prof. Vandana Sharma",
-      "Dr. Shailesh Kumar",
-      "Dr. Swapnita Srivastava",
-      "Dr. Vipul Narayan"
+      "Dr. Rajeev Srivastava",
+      "Prof. Asheesh Kumar Singh",
+      "Dr. Anil Kumar Tripathi",
+      "Dr. Prabhakar Tiwari",
+      "Dr. Rakesh Kumar",
+      "Prof. (Dr.) Meenakshi Awasthi"
     ]
   };
 
@@ -231,17 +199,17 @@ export default function TeamPage(): JSX.Element {
       <Navbar />
       <div className="py-10 px-4">
         <h1 className="text-center text-gray-900 text-4xl font-bold mb-8">Our Team</h1>
-        {Object.entries(roles).map(([role, names]: [string, string[]]) => (
+        {Object.entries(roles).map(([role, names]) => (
           <div key={role} className="mb-8">
             <h2 className="text-2xl text-gray-800 font-bold text-center mb-4">{role}</h2>
             <div className="flex flex-wrap justify-center gap-6">
-              {names.map((name: string) => {
-                const chair: Chair | undefined = cards.find((chair: Chair) => chair.name === name);
+              {names.map((name) => {
+                const chair = cards.find((chair) => chair.name === name);
                 return (
                   chair && (
                     <div
                       key={name}
-                      className="bg-blue-900 text-white shadow-lg rounded-xl p-4 w-72 text-center transform transition duration-300 hover:scale-105"
+                      className="bg-blue-900 border border-blue-800 shadow-xl rounded-xl p-4 w-72 text-center transform transition duration-300 hover:scale-105 hover:shadow-2xl"
                     >
                       {chair.imgSrc ? (
                         <img
@@ -256,9 +224,13 @@ export default function TeamPage(): JSX.Element {
                           className="w-32 h-32 p-5 mx-auto rounded-full border-4 border-white shadow-md invert"
                         />
                       )}
-                      <h2 className="text-xl font-bold mt-4">{name}</h2>
-                      {chair.position && <p className="font-medium">{chair.position}</p>}
-                      {chair.organization && <p className="text-sm">{chair.organization}</p>}
+                      <h2 className="text-xl font-bold mt-4 text-white">{name}</h2>
+                      {chair.position && <p className="font-bold text-gray-200">{chair.position}</p>}
+                      {chair.organization && (
+                        <p className="text-sm text-gray-300 mt-1">
+                          {chair.organization.replace(new RegExp(`^${chair.position}[,\\s-]*`, 'i'), '')}
+                        </p>
+                      )}
                     </div>
                   )
                 );

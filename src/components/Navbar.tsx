@@ -6,23 +6,41 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isCommitteeDropdownOpen, setIsCommitteeDropdownOpen] = useState(false);
+  // const [isCommitteeDropdownOpen, setIsCommitteeDropdownOpen] = useState(false); // Removed unused state
   const location = useLocation();
 
   const navItems = [
     { name: "Home", path: "/" },
-    { 
-      name: "Committee", 
-      path: "/committee",
+    { name: "Registration", path: "/registration" },
+    { name: "Committee", path: "/committee" },
+    {
+      name: "Keynote Sessions",
+      disabled: true,
       dropdown: [
-        { name: "Members", path: "/committee" },
+        { name: "Message from Chairman AICTE", path: "/message-aicte" },
         { name: "Speakers", path: "/speakers" }
       ]
     },
-    { name: "Program", path: "/program" },
-    { name: "Guidelines", path: "/for-authors" },
-    { name: "Registration", path: "/registration" },
-    { name: "Conferences", path: "/conferences" },
+    {
+      name: "Previous Conferences",
+      dropdown: [
+        { name: "2021", path: "https://ieeexplore.ieee.org/xpl/conhome/9601831/proceeding", external: true },
+        { name: "2020", path: "https://ieeexplore.ieee.org/xpl/conhome/9313012/proceeding", external: true },
+        { name: "2018", path: "https://ieeexplore.ieee.org/xpl/conhome/8776840/proceeding", external: true },
+        { name: "2017", path: "https://ieeexplore.ieee.org/xpl/conhome/8229712/proceeding", external: true },
+        { name: "2016", path: "https://ieeexplore.ieee.org/xpl/conhome/7830026/proceeding", external: true },
+        { name: "2015", path: "https://www.iccca.co.in/previous-conferences/2015/", external: true },
+      ]
+    },
+    {
+      name: "Schedule",
+      disabled: true,
+      dropdown: [
+        { name: "Presentation Schedule", path: "/schedule/presentation" },
+        { name: "Keynote Schedule", path: "/schedule/keynote" }
+      ]
+    },
+    { name: "Guidelines", path: "/guidelines" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -53,70 +71,63 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex space-x-1 items-center">
             {navItems.map((item) => {
-              if (item.name === "Program") {
-                return (
-                  <TooltipProvider key={item.name}>
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <span className="px-3 py-2 rounded-md text-sm font-medium text-white opacity-60 cursor-not-allowed">{item.name}</span>
-                      </TooltipTrigger>
-                      <TooltipContent side="bottom">
-                        Coming Soon
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                );
-              }
-              
               if (item.dropdown) {
                 return (
-                  <div 
-                    key={item.name} 
-                    className="relative"
-                    onMouseEnter={() => setIsCommitteeDropdownOpen(true)}
-                    onMouseLeave={() => setIsCommitteeDropdownOpen(false)}
+                  <div
+                    key={item.name}
+                    className="relative group" // Changed to group for CSS hover
                   >
                     <button
-                      className={`px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center space-x-1 ${
-                        isActive(item.path) || isActive("/speakers")
-                          ? "bg-white text-blue-900"
-                          : "text-white hover:bg-blue-800"
-                      }`}
+                      disabled={item.disabled}
+                      className={`px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center space-x-1 ${location.pathname.startsWith(item.navPathPrefix || item.name.toLowerCase().replace(' ', '-'))
+                        ? "bg-white text-blue-900"
+                        : "text-white hover:bg-blue-800"
+                        } ${item.disabled ? "opacity-50 cursor-not-allowed hover:bg-transparent" : ""}`}
                     >
                       <span>{item.name}</span>
                       <ChevronDown className="h-4 w-4" />
                     </button>
-                    
-                    {isCommitteeDropdownOpen && (
-                      <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg border border-gray-200 z-50">
+
+                    {!item.disabled && (
+                      <div className="absolute top-full left-0 w-56 bg-white rounded-md shadow-lg border border-gray-200 z-50 hidden group-hover:block">
                         {item.dropdown.map((dropdownItem) => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.path}
-                            className={`block px-4 py-2 text-sm transition-colors first:rounded-t-md last:rounded-b-md ${
-                              isActive(dropdownItem.path)
+                          dropdownItem.external ? (
+                            <a
+                              key={dropdownItem.name}
+                              href={dropdownItem.path}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors first:rounded-t-md last:rounded-b-md"
+                            >
+                              {dropdownItem.name}
+                            </a>
+                          ) : (
+                            <Link
+                              key={dropdownItem.name}
+                              to={dropdownItem.path}
+                              className={`block px-4 py-2 text-sm transition-colors first:rounded-t-md last:rounded-b-md ${isActive(dropdownItem.path)
                                 ? "bg-blue-900 text-white"
                                 : "text-gray-700 hover:bg-gray-100"
-                            }`}
-                          >
-                            {dropdownItem.name}
-                          </Link>
+                                }`}
+                            >
+                              {dropdownItem.name}
+                            </Link>
+                          )
                         ))}
                       </div>
                     )}
                   </div>
                 );
               }
-              
+
               return (
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    isActive(item.path)
-                      ? "bg-white text-blue-900"
-                      : "text-white hover:bg-blue-800"
-                  }`}
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActive(item.path)
+                    ? "bg-white text-blue-900"
+                    : "text-white hover:bg-blue-800"
+                    }`}
                 >
                   {item.name}
                 </Link>
@@ -159,32 +170,43 @@ const Navbar = () => {
                         {item.name}
                       </div>
                       {item.dropdown.map((dropdownItem) => (
-                        <Link
-                          key={dropdownItem.name}
-                          to={dropdownItem.path}
-                          className={`block px-6 py-2 rounded-md text-sm font-medium transition-colors ${
-                            isActive(dropdownItem.path)
+                        dropdownItem.external ? (
+                          <a
+                            key={dropdownItem.name}
+                            href={dropdownItem.path}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block px-6 py-2 rounded-md text-sm font-medium text-white hover:text-blue-900 hover:bg-blue-50 transition-colors"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {dropdownItem.name}
+                          </a>
+                        ) : (
+                          <Link
+                            key={dropdownItem.name}
+                            to={dropdownItem.path}
+                            className={`block px-6 py-2 rounded-md text-sm font-medium transition-colors ${isActive(dropdownItem.path)
                               ? "bg-white text-blue-900"
                               : "text-white hover:text-blue-900 hover:bg-blue-50"
-                          }`}
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {dropdownItem.name}
-                        </Link>
+                              }`}
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        )
                       ))}
                     </div>
                   );
                 }
-                
+
                 return (
                   <Link
                     key={item.name}
                     to={item.path}
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                      isActive(item.path)
-                        ? "bg-white text-blue-900"
-                        : "text-white hover:text-blue-900 hover:bg-blue-50"
-                    }`}
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActive(item.path)
+                      ? "bg-white text-blue-900"
+                      : "text-white hover:text-blue-900 hover:bg-blue-50"
+                      }`}
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}

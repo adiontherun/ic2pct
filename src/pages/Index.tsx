@@ -71,7 +71,7 @@ const Index = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
                   <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-900">
                     <h4 className="font-semibold text-blue-900 mb-2">Abstract Submission Deadline</h4>
                     <p className="text-gray-700 text-lg">02 January 2026</p>
@@ -83,6 +83,10 @@ const Index = () => {
                   <div className="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500">
                     <h4 className="font-semibold text-orange-700 mb-2">Acceptance Notification</h4>
                     <p className="text-gray-700 text-lg">15 April 2026</p>
+                  </div>
+                  <div className="bg-teal-50 p-4 rounded-lg border-l-4 border-teal-500">
+                    <h4 className="font-semibold text-teal-700 mb-2">Registration Deadline</h4>
+                    <p className="text-gray-700 text-lg">20 April 2026</p>
                   </div>
                   <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-600">
                     <h4 className="font-semibold text-purple-700 mb-2">Final Paper Submission</h4>
