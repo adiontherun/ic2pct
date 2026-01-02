@@ -23,7 +23,7 @@ const ForAuthors = () => {
                     <h1 className="text-2xl md:text-3xl font-bold mt-2 tracking-tight">Author's Guidelines</h1>
                     <hr className="w-40 md:w-56 border-t-2 border-blue-900 mx-auto my-2" />
                     <p className="text-gray-700 mt-4 text-base md:text-lg leading-relaxed">
-                        Authors are invited to submit original, high-quality, and previously unpublished research articles. Submissions must not be under review by any other publication or conference. All manuscripts should be submitted electronically via Microsoft CMT in strict adherence to the IEEE standard two-column conference template, which can be accessed through the provided link. Each manuscript is limited to a maximum of six (6) pages, including figures, tables, and references. Additional pages may be accommodated with a nominal fee.
+                        Authors are invited to submit original, high-quality, and previously unpublished research articles. Submissions must not be under review by any other publication or conference. All manuscripts should be submitted electronically via <a href="https://cmt3.research.microsoft.com/ICCPCT2026/Submission/Manage" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">Microsoft CMT</a> in strict adherence to the IEEE standard two-column conference template, which can be accessed through the provided link. Each manuscript is limited to a maximum of six (6) pages, including figures, tables, and references. Additional pages may be accommodated with a nominal fee.
                     </p>
                 </div>
 
@@ -74,7 +74,7 @@ const ForAuthors = () => {
                             <li>The decision to accept or reject a paper rests with the Technical Program Committee.</li>
                             <li>Accepted papers must address reviewers' comments and meet final submission requirements.</li>
                             <li>The Conference Chair reserves the right to exclude papers not presented or meeting guidelines from the proceedings.</li>
-                            <li>All submissions should be made via Microsoft CMT.</li>
+                            <li>All submissions should be made via <a href="https://cmt3.research.microsoft.com/ICCPCT2026/Submission/Manage" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">Microsoft CMT</a>.</li>
                         </ul>
                     </div>
                 </div>

@@ -49,7 +49,7 @@ const Index = () => {
               <Link to="/registration">Register Now</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white text-blue-900 hover:bg-white hover:text-blue-900">
-              <Link to="/call-for-papers">Submit Paper</Link>
+              <a href="https://cmt3.research.microsoft.com/ICCPCT2026/Submission/Manage" target="_blank" rel="noopener noreferrer">Submit Paper</a>
             </Button>
           </div>
         </div>
