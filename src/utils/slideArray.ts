@@ -234,12 +234,6 @@ export const cards = [
     "imgSrc": "/ImportantPersons/Vipin rai.jpg"
   },
   {
-    "name": "Prof. (Dr.) Sanjeev K. Singh",
-    "position": "",
-    "organization": "Galgotias University, Greater Noida, India",
-    "imgSrc": "/ImportantPersons/Dr. sanjeev kumar singh.jpg"
-  },
-  {
     "name": "Prof. (Dr.) Jagjit Singh Dhatterwal",
     "position": "",
     "organization": "SR University, Warangal, Telangana, India",

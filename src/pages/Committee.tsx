@@ -211,7 +211,7 @@ export default function TeamPage() {
       "Prof. (Dr.) Vipin Rai"
     ],
     "International Advisory Chair": [
-      "Prof. (Dr.) Sanjeev K. Singh",
+      "Prof. (Dr.) Anurag Dwivedi",
       "Prof. (Dr.) Jagjit Singh Dhatterwal"
     ],
     "National Advisory Chair": [
