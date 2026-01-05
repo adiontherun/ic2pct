@@ -2,6 +2,133 @@ import { cards } from "@/utils/slideArray";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+// Helper function to format title - uses existing title if present, otherwise defaults to "Professor"
+const formatTitle = (position: string | undefined, organization: string | undefined, name: string): string => {
+  const meaningfulTitles = [
+    "associate dean", "assistant dean", "dean",
+    "associate director", "assistant director", "director",
+    "hod", "head of department",
+    "pro-vice chancellor", "vice chancellor", "chancellor",
+    "ceo", "president", "vice chair", "chair",
+    "fellow", "scientist", "researcher", "research specialist",
+    "secretary", "joint secretary"
+  ];
+
+  // Check if position has a meaningful title
+  if (position && position.trim() !== "") {
+    const positionLower = position.toLowerCase();
+
+    // If position already contains a meaningful title, use it
+    for (const title of meaningfulTitles) {
+      if (positionLower.includes(title)) {
+        return position;
+      }
+    }
+
+    // Check for "professor" separately (it's a valid title on its own)
+    if (positionLower.includes("professor")) {
+      return position;
+    }
+  }
+
+  // Check if organization contains a meaningful title (like "Associate Dean, DCSE...")
+  if (organization && organization.trim() !== "") {
+    const orgLower = organization.toLowerCase();
+
+    for (const title of meaningfulTitles) {
+      if (orgLower.includes(title)) {
+        // Extract the title part from organization
+        const orgParts = organization.split(',');
+        for (const part of orgParts) {
+          const partLower = part.toLowerCase().trim();
+          for (const t of meaningfulTitles) {
+            if (partLower.includes(t)) {
+              return part.trim();
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Don't add Professor for people with Mr./Ms. prefix - they are not professors
+  const nameLower = name.toLowerCase();
+  if (nameLower.startsWith("mr.") || nameLower.startsWith("ms.") ||
+    nameLower.startsWith("shri") || nameLower.startsWith("smt.")) {
+    return "";
+  }
+
+  // Default to Professor if no meaningful title found
+  return "Professor";
+};
+
+// Helper function to format affiliation - removes redundancy with title
+const formatAffiliation = (organization: string | undefined, position: string | undefined, displayedTitle: string): string => {
+  if (!organization) return "";
+
+  let cleaned = organization;
+
+  // Remove position prefix if it appears at the start of organization
+  if (position && position.trim() !== "") {
+    const escapedPosition = position.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    cleaned = cleaned.replace(new RegExp(`^${escapedPosition}[,\\s-]*`, 'i'), '');
+  }
+
+  // Remove common title prefixes that might be at the start
+  cleaned = cleaned.replace(/^Professor[,\s-]*/i, '');
+  cleaned = cleaned.replace(/^Prof\.[,\s-]*/i, '');
+  cleaned = cleaned.replace(/^Associate Professor[,\s-]*/i, '');
+  cleaned = cleaned.replace(/^Assoc\. Professor[,\s-]*/i, '');
+  cleaned = cleaned.replace(/^Associate Dean[,\s-]*/i, '');
+  cleaned = cleaned.replace(/^Assoc\. Dean[,\s-]*/i, '');
+  cleaned = cleaned.replace(/^Assistant Dean[,\s-]*/i, '');
+  cleaned = cleaned.replace(/^Dean[,\s-]*/i, '');
+  cleaned = cleaned.replace(/^Director[,\s-]*/i, '');
+  cleaned = cleaned.replace(/^Associate Director[,\s-]*/i, '');
+  cleaned = cleaned.replace(/^HoD[,\s-]*/i, '');
+  cleaned = cleaned.replace(/^Head of Department[,\s-]*/i, '');
+
+  // Remove any organization parts that already appear in the displayed title
+  if (displayedTitle && displayedTitle.trim() !== "") {
+    // Extract significant words/phrases from the title (ignore common words)
+    const titleParts = displayedTitle.split(/[,\s-]+/).filter(part =>
+      part.length > 2 && !['and', 'the', 'of', 'for', 'professor', 'prof', 'dr'].includes(part.toLowerCase())
+    );
+
+    // Check if title contains organization names like "IIT Kanpur", "GSCALE", etc.
+    const orgPatterns = [
+      /IIT\s+\w+/i,
+      /NIT\s+\w+/i,
+      /MNNIT/i,
+      /MMMUT/i,
+      /GSCALE/i,
+      /SCSE/i,
+      /SCAT/i,
+      /DCSE/i,
+      /DAIML/i,
+      /DAIDS/i,
+      /DCYS/i,
+      /SAI/i,
+      /SOHT/i,
+      /SMCS/i,
+      /DOME/i,
+      /DOCE/i,
+      /DEECE/i
+    ];
+
+    for (const pattern of orgPatterns) {
+      const match = displayedTitle.match(pattern);
+      if (match) {
+        // Remove this pattern from the organization if it appears at the start
+        const escapedMatch = match[0].replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        cleaned = cleaned.replace(new RegExp(`^${escapedMatch}[,\\s-]*`, 'i'), '');
+      }
+    }
+  }
+
+  return cleaned.trim();
+};
+
 export default function TeamPage() {
   const roles = {
     "Chief Patron": [
@@ -225,12 +352,24 @@ export default function TeamPage() {
                         />
                       )}
                       <h2 className="text-xl font-bold mt-4 text-white">{name}</h2>
-                      {chair.position && <p className="font-bold text-gray-200">{chair.position}</p>}
-                      {chair.organization && (
-                        <p className="text-sm text-gray-300 mt-1">
-                          {chair.organization.replace(new RegExp(`^${chair.position}[,\\s-]*`, 'i'), '')}
-                        </p>
-                      )}
+                      {(() => {
+                        const title = formatTitle(chair.position, chair.organization, name);
+                        const affiliation = formatAffiliation(chair.organization, chair.position, title);
+                        return (
+                          <>
+                            {title && (
+                              <p className="text-base font-extrabold text-gray-100 mt-2">
+                                {title}
+                              </p>
+                            )}
+                            {affiliation && (
+                              <p className="text-sm font-normal text-gray-300 mt-1">
+                                {affiliation}
+                              </p>
+                            )}
+                          </>
+                        );
+                      })()}
                     </div>
                   )
                 );
