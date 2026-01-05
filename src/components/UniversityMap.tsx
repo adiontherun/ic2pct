@@ -5,7 +5,7 @@ const UniversityMap = () => {
   return (
     <div className="w-full h-96 bg-gray-200 rounded-lg overflow-hidden shadow-lg">
       <iframe
-        src="https://maps.google.com/maps?q=28.4595,77.5324&t=&z=16&ie=UTF8&iwloc=B&output=embed"
+        src="https://maps.google.com/maps?q=28.3669,77.5413&t=&z=15&ie=UTF8&iwloc=&output=embed"
         width="100%"
         height="100%"
         style={{ border: 0 }}
