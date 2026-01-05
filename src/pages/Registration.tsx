@@ -77,7 +77,7 @@ const Page: React.FC = () => {
               One full author registration can register up to 2 papers
             </p>
             <p className="text-red-600 text-sm text-center mt-2">
-              * Extra page charge of ₹ 1000/- INR per page Indian author and $ 15 per page International author will be chargeable to the author's during registration process.
+              * Each accepted paper is allowed a maximum of 6 pages in the final manuscript. Authors may include up to 2 additional pages beyond the basic 6 pages, if required. An extra page charge will apply at the time of author registration: INR 1000 per additional page for Indian authors and USD 15 per additional page for international authors.
             </p>
           </div>
         </div>
