@@ -4,46 +4,58 @@ import Footer from "@/components/Footer";
 
 // Helper function to format title - uses existing title if present, otherwise defaults to "Professor"
 const formatTitle = (position: string | undefined, organization: string | undefined, name: string): string => {
-  const meaningfulTitles = [
+  // High-priority roles that should take priority over generic "Professor"
+  const highPriorityRoles = [
     "associate dean", "assistant dean", "dean",
     "associate director", "assistant director", "director",
     "hod", "head of department",
     "pro-vice chancellor", "vice chancellor", "chancellor",
-    "ceo", "president", "vice chair", "chair",
-    "fellow", "scientist", "researcher", "research specialist",
-    "secretary", "joint secretary"
+    "ceo", "president"
   ];
 
-  // Check if position has a meaningful title
+  // FIRST: Check if position has a high-priority role
   if (position && position.trim() !== "") {
     const positionLower = position.toLowerCase();
-
-    // If position already contains a meaningful title, use it
-    for (const title of meaningfulTitles) {
-      if (positionLower.includes(title)) {
+    for (const role of highPriorityRoles) {
+      if (positionLower.includes(role)) {
         return position;
       }
     }
-
-    // Check for "professor" separately (it's a valid title on its own)
-    if (positionLower.includes("professor")) {
-      return position;
-    }
   }
 
-  // Check if organization contains a meaningful title (like "Associate Dean, DCSE...")
+  // SECOND: Check if organization contains a high-priority role (like "Associate Dean, DCSE...")
+  // This takes priority over a generic "Professor" in position
   if (organization && organization.trim() !== "") {
     const orgLower = organization.toLowerCase();
 
-    for (const title of meaningfulTitles) {
-      if (orgLower.includes(title)) {
-        // Extract the title part from organization
-        const orgParts = organization.split(',');
-        for (const part of orgParts) {
-          const partLower = part.toLowerCase().trim();
-          for (const t of meaningfulTitles) {
-            if (partLower.includes(t)) {
-              return part.trim();
+    for (const role of highPriorityRoles) {
+      if (orgLower.includes(role)) {
+        // Extract the title part along with department/unit from organization
+        const orgParts = organization.split(',').map(p => p.trim());
+
+        // Find which part contains the role
+        for (let i = 0; i < orgParts.length; i++) {
+          const partLower = orgParts[i].toLowerCase();
+          for (const r of highPriorityRoles) {
+            if (partLower.includes(r)) {
+              // Take this part and possibly the next one if it's a department/unit abbreviation
+              let extractedTitle = orgParts[i];
+
+              // Check if next part is a department/unit abbreviation (short name, all caps, etc.)
+              if (i + 1 < orgParts.length) {
+                const nextPart = orgParts[i + 1].trim();
+                // If next part is short (likely a department code like IQAC, SCSE, etc.) 
+                // or contains department keywords, include it
+                if (nextPart.length <= 10 ||
+                  /^[A-Z]{2,}$/.test(nextPart) ||
+                  nextPart.toLowerCase().includes("department") ||
+                  /^D[A-Z]+$/.test(nextPart) || // DAIML, DCSE, etc.
+                  /^S[A-Z]+$/.test(nextPart)) { // SCSE, SCAT, etc.
+                  extractedTitle = `${orgParts[i]}, ${nextPart}`;
+                }
+              }
+
+              return extractedTitle;
             }
           }
         }
@@ -51,10 +63,29 @@ const formatTitle = (position: string | undefined, organization: string | undefi
     }
   }
 
-  // Don't add Professor for people with Mr./Ms. prefix - they are not professors
+  // THIRD: If position has "professor", just use "Professor" (not the full string)
+  if (position && position.trim() !== "") {
+    const positionLower = position.toLowerCase();
+    if (positionLower.includes("professor")) {
+      // Return just "Professor" or "Associate Professor" etc., not the full string with institution
+      if (positionLower.includes("associate professor")) {
+        return "Associate Professor";
+      } else if (positionLower.includes("assistant professor")) {
+        return "Assistant Professor";
+      } else {
+        return "Professor";
+      }
+    }
+  }
+
+  // For people with Mr./Ms. prefix - use their position if they have one, otherwise return empty (they are not professors)
   const nameLower = name.toLowerCase();
   if (nameLower.startsWith("mr.") || nameLower.startsWith("ms.") ||
     nameLower.startsWith("shri") || nameLower.startsWith("smt.")) {
+    // If they have a specific position, use that
+    if (position && position.trim() !== "") {
+      return position;
+    }
     return "";
   }
 
@@ -66,67 +97,52 @@ const formatTitle = (position: string | undefined, organization: string | undefi
 const formatAffiliation = (organization: string | undefined, position: string | undefined, displayedTitle: string): string => {
   if (!organization) return "";
 
-  let cleaned = organization;
+  // Split the organization into parts
+  const orgParts = organization.split(',').map(p => p.trim());
 
-  // Remove position prefix if it appears at the start of organization
-  if (position && position.trim() !== "") {
-    const escapedPosition = position.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    cleaned = cleaned.replace(new RegExp(`^${escapedPosition}[,\\s-]*`, 'i'), '');
-  }
+  // Get words/phrases from the displayed title (for comparison)
+  const titleWords = displayedTitle ? displayedTitle.toLowerCase().split(/[,\s]+/).filter(w => w.length > 1) : [];
 
-  // Remove common title prefixes that might be at the start
-  cleaned = cleaned.replace(/^Professor[,\s-]*/i, '');
-  cleaned = cleaned.replace(/^Prof\.[,\s-]*/i, '');
-  cleaned = cleaned.replace(/^Associate Professor[,\s-]*/i, '');
-  cleaned = cleaned.replace(/^Assoc\. Professor[,\s-]*/i, '');
-  cleaned = cleaned.replace(/^Associate Dean[,\s-]*/i, '');
-  cleaned = cleaned.replace(/^Assoc\. Dean[,\s-]*/i, '');
-  cleaned = cleaned.replace(/^Assistant Dean[,\s-]*/i, '');
-  cleaned = cleaned.replace(/^Dean[,\s-]*/i, '');
-  cleaned = cleaned.replace(/^Director[,\s-]*/i, '');
-  cleaned = cleaned.replace(/^Associate Director[,\s-]*/i, '');
-  cleaned = cleaned.replace(/^HoD[,\s-]*/i, '');
-  cleaned = cleaned.replace(/^Head of Department[,\s-]*/i, '');
+  // Filter out parts that are already in the title
+  const filteredParts = orgParts.filter(part => {
+    const partLower = part.toLowerCase();
 
-  // Remove any organization parts that already appear in the displayed title
-  if (displayedTitle && displayedTitle.trim() !== "") {
-    // Extract significant words/phrases from the title (ignore common words)
-    const titleParts = displayedTitle.split(/[,\s-]+/).filter(part =>
-      part.length > 2 && !['and', 'the', 'of', 'for', 'professor', 'prof', 'dr'].includes(part.toLowerCase())
-    );
-
-    // Check if title contains organization names like "IIT Kanpur", "GSCALE", etc.
-    const orgPatterns = [
-      /IIT\s+\w+/i,
-      /NIT\s+\w+/i,
-      /MNNIT/i,
-      /MMMUT/i,
-      /GSCALE/i,
-      /SCSE/i,
-      /SCAT/i,
-      /DCSE/i,
-      /DAIML/i,
-      /DAIDS/i,
-      /DCYS/i,
-      /SAI/i,
-      /SOHT/i,
-      /SMCS/i,
-      /DOME/i,
-      /DOCE/i,
-      /DEECE/i
-    ];
-
-    for (const pattern of orgPatterns) {
-      const match = displayedTitle.match(pattern);
-      if (match) {
-        // Remove this pattern from the organization if it appears at the start
-        const escapedMatch = match[0].replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        cleaned = cleaned.replace(new RegExp(`^${escapedMatch}[,\\s-]*`, 'i'), '');
+    // Check if this part (or significant portion of it) appears in the title
+    for (const titleWord of titleWords) {
+      if (titleWord.length > 2 && partLower.includes(titleWord)) {
+        return false; // Skip this part
+      }
+      if (partLower.length > 2 && displayedTitle.toLowerCase().includes(partLower)) {
+        return false; // Skip this part
       }
     }
-  }
 
-  return cleaned.trim();
+    // Also remove common title prefixes
+    const titlesToRemove = [
+      'professor', 'prof.', 'associate professor', 'assistant professor',
+      'dean', 'associate dean', 'assistant dean',
+      'director', 'associate director', 'assistant director',
+      'hod', 'head of department'
+    ];
+
+    for (const title of titlesToRemove) {
+      if (partLower.startsWith(title) || partLower === title) {
+        return false;
+      }
+    }
+
+    // Remove department codes if they're in the title
+    const deptCodes = ['IQAC', 'SCSE', 'SCAT', 'DCSE', 'DAIML', 'DAIDS', 'DCYS', 'SAI', 'SOHT', 'SMCS', 'DOME', 'DOCE', 'DEECE', 'GSCALE', 'APR'];
+    for (const code of deptCodes) {
+      if (displayedTitle.toUpperCase().includes(code) && part.toUpperCase().includes(code)) {
+        return false;
+      }
+    }
+
+    return true;
+  });
+
+  return filteredParts.join(', ').trim();
 };
 
 export default function TeamPage() {
@@ -188,7 +204,7 @@ export default function TeamPage() {
       "Prof. (Dr.) Anupam Baliyan",
       "Prof. (Dr.) Trapti Shrivastava",
       "Prof. (Dr.) Shipra Shukla",
-      "Prof. Jitendra"
+      "Prof. (Dr.) Jitendra"
     ],
     "Publication Co-Chair": [
       "Prof. (Dr.) Shashi Bhusan",

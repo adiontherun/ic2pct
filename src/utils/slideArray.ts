@@ -210,7 +210,7 @@ export const cards = [
     "imgSrc": "/ImportantPersons/shipra.jpg"
   },
   {
-    "name": "Prof. Jitendra",
+    "name": "Prof. (Dr.) Jitendra",
     "position": "",
     "organization": "Galgotias University, Greater Noida, India",
     "imgSrc": "/ImportantPersons/jitendra.jpg"
