@@ -1,8 +1,8 @@
 
 import { useState, useEffect } from 'react';
 
-// Target date: February 7, 2026 at midnight IST (UTC+5:30)
-const TARGET_DATE = new Date('2026-02-07T00:00:00+05:30').getTime();
+// Target date: May 15, 2026 at midnight IST (UTC+5:30) - Conference starts May 15-17
+const TARGET_DATE = new Date('2026-05-15T00:00:00+05:30').getTime();
 
 const calculateTimeLeft = () => {
   const now = new Date().getTime();
