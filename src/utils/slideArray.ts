@@ -282,16 +282,16 @@ export const cards = [
     "imgSrc": "/ImportantPersons/DINESH KUMAR.jpeg"
   },
   {
-    "name": "Mr. Pankaj Lamba",
-    "position": "",
-    "organization": "Galgotias University, Greater Noida, India",
-    "imgSrc": "/ImportantPersons/Pankaj LAMBA.jpeg"
-  },
-  {
     "name": "Mr. Gaurang Pant",
     "position": "Chair IEEE CS GU",
     "organization": "Chair IEEE CS GU, Galgotias University, India",
     "imgSrc": "/ImportantPersons/gaurang.jpg"
+  },
+  {
+    "name": "Mr. Manas Saxena",
+    "position": "Tech Lead IEEE GU",
+    "organization": "Tech Lead IEEE GU, Galgotias University, India",
+    "imgSrc": "/ImportantPersons/manas.jpeg"
   },
   {
     "name": "Prof. (Dr.) Neha Jindal",

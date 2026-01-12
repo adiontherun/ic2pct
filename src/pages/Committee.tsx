@@ -230,8 +230,8 @@ export default function TeamPage() {
       "Prof. (Dr.) Dinesh Kumar"
     ],
     "Website & Graphics Chair": [
-      "Mr. Pankaj Lamba",
-      "Mr. Gaurang Pant"
+      "Mr. Gaurang Pant",
+      "Mr. Manas Saxena"
     ],
     "Media Chair": [
       "Prof. (Dr.) Neha Jindal"
