@@ -24,7 +24,6 @@ const Page: React.FC = () => {
               </thead>
               <tbody className="text-blue-900">
                 {/* Online Registration Section */}
-                {/* Online Registration Section
                 <tr className="bg-blue-100">
                   <td className="p-3 border border-blue-900 font-bold text-blue-800" rowSpan={3}>ONLINE</td>
                   <td className="p-3 border border-blue-900">Regular/Industry</td>
@@ -44,7 +43,6 @@ const Page: React.FC = () => {
                   <td className="p-3 border border-blue-900">2,500 INR / 100 USD</td>
                   <td className="p-3 border border-blue-900">3,500 INR / 150 USD</td>
                 </tr>
-                */}
 
                 {/* Offline Registration Section */}
                 <tr className="bg-green-100">
