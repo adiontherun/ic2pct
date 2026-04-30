@@ -10,6 +10,18 @@ const speakers = [
     imgSrc: "/ImportantPersons/sudeendra.jpeg"
   },
   {
+    name: "Fred Schindler",
+    position: "Member",
+    organization: "IEEE Board of Directors",
+    imgSrc: "/ImportantPersons/fred.jpeg"
+  },
+  {
+    name: "Dr. Dac Nhuong Le",
+    position: "Associate Professor",
+    organization: "Haiphong University, Vietnam",
+    imgSrc: "/ImportantPersons/dac nhuong le.jpeg"
+  },
+  {
     name: "Prof. (Dr.) S.N. Singh",
     position: "Director",
     organization: "ABV-IIITM, Gwalior, India",
@@ -50,18 +62,6 @@ const speakers = [
     position: "Jt. Secretary",
     organization: "IEEE UP Section",
     imgSrc: "/ImportantPersons/varunkakar.jpg"
-  },
-  {
-    name: "Dr. Dac Nhuong Le",
-    position: "Associate Professor",
-    organization: "Haiphong University, Vietnam",
-    imgSrc: "/ImportantPersons/dac nhuong le.jpeg"
-  },
-  {
-    name: "Fred Schindler",
-    position: "Member",
-    organization: "IEEE Board of Directors",
-    imgSrc: "/ImportantPersons/fred.jpeg"
   },
   {
     name: "Prof. (Dr.) Harivardhagini Subhadra",
