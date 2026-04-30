@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 const speakers = [
   {
     name: "Dr. Sudeendra Koushik",
-    position: "President TEMS",
+    position: "President, IEEE TEMS",
     organization: "",
     imgSrc: "/ImportantPersons/sudeendra.jpeg"
   },
@@ -29,7 +29,7 @@ const speakers = [
   },
   {
     name: "Dr. Mrutyunjay Mohapatra",
-    position: "Director General of Meteorology",
+    position: "Director General of Meteorology, India",
     organization: "",
     imgSrc: "/ImportantPersons/mrutyunjay mohapatra.jpeg"
   },
@@ -97,10 +97,10 @@ export default function KeynoteSpeakers(): JSX.Element {
                   {speaker.name}
                 </h3>
                 {speaker.position && (
-                   <p className="text-gray-700 mt-2 font-medium">{speaker.position}</p>
+                  <p className="text-gray-700 mt-2 font-medium">{speaker.position}</p>
                 )}
                 {speaker.organization && (
-                   <p className="text-gray-500 text-sm mt-1">{speaker.organization}</p>
+                  <p className="text-gray-500 text-sm mt-1">{speaker.organization}</p>
                 )}
               </div>
             );
