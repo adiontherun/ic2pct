@@ -17,6 +17,7 @@ import WieHackerearth from "./pages/Events/WieHackerearth";
 import ICEO from "./pages/Events/ICEO";
 import PresentationSchedule from "./pages/Schedule/Presentation";
 import KeynoteSchedule from "./pages/Schedule/Keynote";
+import TechnicalSessionSchedule from "./pages/Schedule/TechnicalSession";
 import BestPaperAward from "./pages/Awards/BestPaper";
 import YoungResearcherAward from "./pages/Awards/YoungResearcher";
 import Guidelines from "./pages/Guidelines";
@@ -45,6 +46,7 @@ const App = () => (
           <Route path="/events/i-ceo" element={<ICEO />} />
           <Route path="/schedule/presentation" element={<PresentationSchedule />} />
           <Route path="/schedule/keynote" element={<KeynoteSchedule />} />
+          <Route path="/schedule/technical-session" element={<TechnicalSessionSchedule />} />
           <Route path="/awards/best-paper" element={<BestPaperAward />} />
           <Route path="/awards/young-researcher" element={<YoungResearcherAward />} />
           <Route path="/guidelines" element={<Guidelines />} />
