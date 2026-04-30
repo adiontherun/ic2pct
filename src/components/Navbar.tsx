@@ -34,7 +34,6 @@ const Navbar = () => {
       name: "Schedule",
       dropdown: [
         { name: "Technical Session", path: "/schedule/technical-session" },
-        { name: "Presentation Schedule", path: "/schedule/presentation" },
         { name: "Keynote Schedule", path: "/schedule/keynote" }
       ]
     },
