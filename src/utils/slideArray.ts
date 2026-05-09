@@ -204,7 +204,7 @@ export const cards = [
   },
   {
     "name": "Prof. (Dr.) Trapti Shrivastava",
-    "position": "",
+    "position": "Assistant Professor",
     "organization": "Galgotias University, Greater Noida, India",
     "imgSrc": "/ImportantPersons/trapti.jpg"
   },
@@ -1103,7 +1103,7 @@ export const cards = [
     "imgSrc": "/ImportantPersons/VINOD SIR INSPACE.jpeg"
   },
   {
-    "name": "Dr. Aishwarya",
+    "name": "Prof. Aishwarya",
     "position": "Assistant Professor",
     "organization": "SCSE, Galgotias University, Greater Noida, India",
     "imgSrc": "/ImportantPersons/dr aishwarya.jpeg"

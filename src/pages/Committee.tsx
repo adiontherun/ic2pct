@@ -206,7 +206,7 @@ export default function TeamPage() {
     "Conference Technical Co-Chair": [
       "Prof. (Dr.) Anupam Baliyan",
       "Prof. (Dr.) Shipra Shukla",
-      "Dr. Aishwarya",
+      "Prof. Aishwarya",
       "Prof. Meenakshi Srivastava"
     ],
     "Publication Co-Chair": [
