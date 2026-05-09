@@ -4,10 +4,10 @@ import Footer from "@/components/Footer";
 
 const speakers = [
   {
-    name: "Dr. Sudeendra Koushik",
-    position: "President, IEEE TEMS",
-    organization: "",
-    imgSrc: "/ImportantPersons/sudeendra.jpeg"
+    name: "Dr. Praveena Nair Sivasankaran",
+    position: "Clean Technology Impact Lab Director",
+    organization: "Taylor's University, Malaysia",
+    imgSrc: "/ImportantPersons/praveen sivasankaran.jpeg"
   },
   {
     name: "Fred Schindler",
@@ -16,70 +16,52 @@ const speakers = [
     imgSrc: "/ImportantPersons/fred.jpeg"
   },
   {
-    name: "Dr. Dac Nhuong Le",
-    position: "Associate Professor",
-    organization: "Haiphong University, Vietnam",
-    imgSrc: "/ImportantPersons/dac nhuong le.jpeg"
-  },
-  {
-    name: "Prof. (Dr.) S.N. Singh",
-    position: "Director",
-    organization: "ABV-IIITM, Gwalior, India",
-    imgSrc: "/ImportantPersons/snsingh.png"
-  },
-  {
-    name: "Dr. Mrutyunjay Mohapatra",
-    position: "Director General of Meteorology, India",
-    organization: "",
-    imgSrc: "/ImportantPersons/mrutyunjay mohapatra.jpeg"
-  },
-  {
-    name: "Prof. (Dr.) Yogesh S. Chauhan",
-    position: "Professor, IIT Kanpur",
-    organization: "Chair, IEEE UP Section",
-    imgSrc: "/ImportantPersons/yogesh.png"
-  },
-  {
-    name: "Dr. Mohammad Rihan",
-    position: "Chair Elect",
-    organization: "IEEE UP Section",
-    imgSrc: "/ImportantPersons/mohammadrihan.jpg"
-  },
-  {
-    name: "Prof. Asheesh K. Singh",
-    position: "Professor",
-    organization: "MNNIT Allahabad",
-    imgSrc: "/ImportantPersons/asheeshsingh.jpg"
-  },
-  {
-    name: "Dr. Rajeev Kr. Singh",
-    position: "Professor, IIT BHU",
-    organization: "Secretary, IEEE UP Section",
-    imgSrc: "/ImportantPersons/rajeev singh.jpeg"
-  },
-  {
-    name: "Dr. Varun Kakkar",
-    position: "Jt. Secretary",
-    organization: "IEEE UP Section",
-    imgSrc: "/ImportantPersons/varunkakar.jpg"
-  },
-  {
-    name: "Prof. (Dr.) Harivardhagini Subhadra",
-    position: "Professor, CVR College of Engineering",
-    organization: "IEEE WIE Committee Member",
-    imgSrc: "/ImportantPersons/harivardhagini.jpeg"
-  },
-  {
-    name: "Dr. Praveena Nair Sivasankaran",
-    position: "Senior Lecturer",
-    organization: "Taylor's University",
-    imgSrc: "/ImportantPersons/praveen sivasankaran.jpeg"
-  },
-  {
     name: "Dr. Carol Lo",
     position: "",
     organization: "University of the West of England, United Kingdom",
     imgSrc: "/ImportantPersons/carlo.jpeg"
+  },
+  {
+    name: "Dr. Dac Nhuong Le",
+    position: "Associate Professor",
+    organization: "Faculty of Information Technology, Haiphong University, Vietnam",
+    imgSrc: "/ImportantPersons/dac nhuong le.jpeg"
+  },
+  {
+    name: "Dr. Sudeendra Koushik",
+    position: "President",
+    organization: "IEEE Technology and Engineering Management Society (TEMS)",
+    imgSrc: "/ImportantPersons/sudeendra.jpeg"
+  },
+  {
+    name: "Prof. Sri Niwas Singh",
+    position: "Director",
+    organization: "ABV-Indian Institute of Information Technology and Management, Gwalior, India",
+    imgSrc: "/ImportantPersons/snsingh.png"
+  },
+  {
+    name: "Prof. Yogesh S. Chauhan",
+    position: "Professor, IIT Kanpur, India",
+    organization: "Chair, IEEE UP Section",
+    imgSrc: "/ImportantPersons/yogesh.png"
+  },
+  {
+    name: "Prof. Rajeev Kumar Singh",
+    position: "Professor, IIT (BHU), Varanasi, India",
+    organization: "Secretary, IEEE UP Section",
+    imgSrc: "/ImportantPersons/rajeev singh.jpeg"
+  },
+  {
+    name: "Dr. Mrutyunjay Mohapatra",
+    position: "Director General of Meteorology",
+    organization: "India Meteorological Department, Government of India",
+    imgSrc: "/ImportantPersons/mrutyunjay mohapatra.jpeg"
+  },
+  {
+    name: "Prof. Mohd Rihan",
+    position: "Director General, NISE, India",
+    organization: "Chair Elect, IEEE UP Section",
+    imgSrc: "/ImportantPersons/mohammadrihan.jpg"
   },
   {
     name: "Prof. Raghvendra Kumar Chaudhary",
@@ -88,10 +70,28 @@ const speakers = [
     imgSrc: "/ImportantPersons/prof raghvendra chaudhary.jpeg"
   },
   {
+    name: "Prof. Asheesh Kumar Singh",
+    position: "Professor",
+    organization: "Motilal Nehru National Institute of Technology, Prayagraj, India",
+    imgSrc: "/ImportantPersons/asheeshsingh.jpg"
+  },
+  {
+    name: "Dr. Harivardhagini Subhadra",
+    position: "Chair — Women Education & Empowerment",
+    organization: "IEEE Systems Council Education Subcommittee",
+    imgSrc: "/ImportantPersons/harivardhagini.jpeg"
+  },
+  {
     name: "Dr. Abhishek Appaji",
     position: "Treasurer",
     organization: "IEEE Education Society",
     imgSrc: "/ImportantPersons/abhishek.jpg"
+  },
+  {
+    name: "Dr. Varun Kakar",
+    position: "Bipin Tripathi Kumaon Institute of Technology, India",
+    organization: "Joint Secretary, IEEE UP Section",
+    imgSrc: "/ImportantPersons/varunkakar.jpg"
   },
   {
     name: "Dr. D. S. Singh",

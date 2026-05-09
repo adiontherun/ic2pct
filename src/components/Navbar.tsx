@@ -13,12 +13,7 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "Registration", path: "/registration" },
     { name: "Committee", path: "/committee" },
-    {
-      name: "Keynote Sessions",
-      dropdown: [
-        { name: "Speakers", path: "/speakers" }
-      ]
-    },
+    { name: "Keynote Speakers", path: "/speakers" },
     {
       name: "Previous Conferences",
       dropdown: [
