@@ -181,7 +181,6 @@ export default function TeamPage() {
       // "Prof. (Dr.) Sudhir Kr. Singh",
       // "Prof. (Dr.) Deepak Soni",
       "Prof. (Dr.) Sonia Setia",
-      "Prof. (Dr.) Jitendra",
       "Prof. (Dr.) Trapti Shrivastava"
     ],
     "Publication Chair": [

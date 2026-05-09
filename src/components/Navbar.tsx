@@ -22,12 +22,11 @@ const Navbar = () => {
     {
       name: "Previous Conferences",
       dropdown: [
-        { name: "2021", path: "https://ieeexplore.ieee.org/xpl/conhome/9601831/proceeding", external: true },
-        { name: "2020", path: "https://ieeexplore.ieee.org/xpl/conhome/9313012/proceeding", external: true },
-        { name: "2018", path: "https://ieeexplore.ieee.org/xpl/conhome/8776840/proceeding", external: true },
-        { name: "2017", path: "https://ieeexplore.ieee.org/xpl/conhome/8229712/proceeding", external: true },
-        { name: "2016", path: "https://ieeexplore.ieee.org/xpl/conhome/7830026/proceeding", external: true },
-        { name: "2015", path: "https://www.iccca.co.in/previous-conferences/2015/", external: true },
+        { name: "2024", path: "https://ieeexplore.ieee.org/document/10486467", external: true },
+        { name: "2021", path: "https://ieeexplore.ieee.org/xpl/conhome/9573501/proceeding", external: true },
+        { name: "2020", path: "https://ieeexplore.ieee.org/xpl/conhome/9230460/proceeding", external: true },
+        { name: "2019", path: "https://ieeexplore.ieee.org/xpl/conhome/8933293/proceeding", external: true },
+        { name: "2018", path: "https://ieeexplore.ieee.org/xpl/conhome/8671767/proceeding", external: true },
       ]
     },
     {
