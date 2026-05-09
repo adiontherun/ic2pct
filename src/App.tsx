@@ -18,11 +18,15 @@ import ICEO from "./pages/Events/ICEO";
 import PresentationSchedule from "./pages/Schedule/Presentation";
 import KeynoteSchedule from "./pages/Schedule/Keynote";
 import TechnicalSessionSchedule from "./pages/Schedule/TechnicalSession";
+import InaugurationSchedule from "./pages/Schedule/Inauguration";
+import ValedictorySchedule from "./pages/Schedule/Valedictory";
 import BestPaperAward from "./pages/Awards/BestPaper";
 import YoungResearcherAward from "./pages/Awards/YoungResearcher";
 import Guidelines from "./pages/Guidelines";
 import Sponsors from "./pages/Sponsors";
 import Contact from "./pages/Contact";
+import Events from "./pages/Events";
+import Awards from "./pages/Awards";
 
 const queryClient = new QueryClient();
 
@@ -47,11 +51,15 @@ const App = () => (
           <Route path="/schedule/presentation" element={<PresentationSchedule />} />
           <Route path="/schedule/keynote" element={<KeynoteSchedule />} />
           <Route path="/schedule/technical-session" element={<TechnicalSessionSchedule />} />
+          <Route path="/schedule/inauguration" element={<InaugurationSchedule />} />
+          <Route path="/schedule/valedictory" element={<ValedictorySchedule />} />
           <Route path="/awards/best-paper" element={<BestPaperAward />} />
           <Route path="/awards/young-researcher" element={<YoungResearcherAward />} />
           <Route path="/guidelines" element={<Guidelines />} />
           <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/awards" element={<Awards />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

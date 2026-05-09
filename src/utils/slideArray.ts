@@ -23,7 +23,12 @@ export const cards = [
     "organization": "Director, ABV-IIITM, Gwalior, India",
     "imgSrc": "/ImportantPersons/snsingh.png"
   },
-  // {
+  {
+    "name": "Prof. (Dr.) K.M. Babu",
+    "position": "Vice-Chancellor",
+    "organization": "Vice-Chancellor, Galgotias University, Greater Noida, India",
+    "imgSrc": "/ImportantPersons/mkbabu.png"
+  },
   //   "name": "Dr. Ankush Mittal",
   //   "position": "Vice Chancellor",
   //   "organization": "Galgotias University, Greater Noida, India",
@@ -1096,6 +1101,30 @@ export const cards = [
     "position": "Director, Promotion Directorate (IN-SPACe)",
     "organization": "",
     "imgSrc": "/ImportantPersons/VINOD SIR INSPACE.jpeg"
+  },
+  {
+    "name": "Dr. Aishwarya",
+    "position": "Assistant Professor",
+    "organization": "SCSE, Galgotias University, Greater Noida, India",
+    "imgSrc": "/ImportantPersons/dr aishwarya.jpeg"
+  },
+  {
+    "name": "Prof. Meenakshi Srivastava",
+    "position": "Assistant Professor",
+    "organization": "Galgotias University, Greater Noida, India",
+    "imgSrc": "/ImportantPersons/prof meenakshi srivastava.jpeg"
+  },
+  {
+    "name": "Prof. Sachin Saurabh",
+    "position": "Assistant Professor",
+    "organization": "Galgotias University, Greater Noida, India",
+    "imgSrc": "/ImportantPersons/prof sachin saurabh.png"
+  },
+  {
+    "name": "Dr. Sonia Kukreja",
+    "position": "Associate Professor",
+    "organization": "Galgotias University, Greater Noida, India",
+    "imgSrc": "/ImportantPersons/dr sonia kukreja.jpeg"
   }
 ];
 

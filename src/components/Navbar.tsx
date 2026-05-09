@@ -34,10 +34,14 @@ const Navbar = () => {
       name: "Schedule",
       dropdown: [
         { name: "Technical Session", path: "/schedule/technical-session" },
-        { name: "Keynote Schedule", path: "/schedule/keynote" }
+        { name: "Keynote Schedule", path: "/schedule/keynote" },
+        { name: "Inauguration Ceremony", path: "/schedule/inauguration" },
+        { name: "Valedictory Ceremony", path: "/schedule/valedictory" }
       ]
     },
     { name: "Guidelines", path: "/guidelines" },
+    { name: "Events", path: "/events" },
+    { name: "Awards", path: "/awards" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -215,32 +219,6 @@ const Navbar = () => {
         )}
       </div>
 
-      {/* Marquee Notification Bar */}
-      <div className="bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 overflow-hidden relative">
-        <div className="flex items-center py-2">
-          <div
-            className="whitespace-nowrap animate-marquee flex items-center gap-12"
-            style={{
-              animation: "marquee 18s linear infinite",
-            }}
-          >
-            {[...Array(4)].map((_, i) => (
-              <span key={i} className="flex items-center gap-3 text-sm md:text-base font-bold text-red-900 tracking-wide">
-                <span className="inline-block w-2 h-2 rounded-full bg-red-700 animate-pulse" />
-                📢 IMPORTANT NOTICE: Only authors whose abstracts have been accepted are eligible to submit their full papers.
-                <span className="inline-block w-2 h-2 rounded-full bg-red-700 animate-pulse" />
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <style>{`
-        @keyframes marquee {
-          0% { transform: translateX(0%); }
-          100% { transform: translateX(-50%); }
-        }
-      `}</style>
     </nav>
   );
 };

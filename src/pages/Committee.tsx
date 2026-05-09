@@ -154,7 +154,8 @@ export default function TeamPage() {
       "Dr. Dhruv Galgotia",
       "Ms. Aradhana Galgotia",
       // "Dr. Ankush Mittal",
-      "Prof. (Dr.) S.N.Singh"
+      "Prof. (Dr.) S.N.Singh",
+      "Prof. (Dr.) K.M. Babu"
     ],
     "Conference General Chair": [
       "Prof. (Dr.) Avadhesh Kumar",
@@ -177,9 +178,11 @@ export default function TeamPage() {
     ],
     "Technical Program Committee Chair": [
       "Prof. (Dr.) Vineeta Khemchandani",
-      "Prof. (Dr.) Sudhir Kr. Singh",
-      "Prof. (Dr.) Deepak Soni",
-      "Prof. (Dr.) Sonia Setia"
+      // "Prof. (Dr.) Sudhir Kr. Singh",
+      // "Prof. (Dr.) Deepak Soni",
+      "Prof. (Dr.) Sonia Setia",
+      "Prof. (Dr.) Jitendra",
+      "Prof. (Dr.) Trapti Shrivastava"
     ],
     "Publication Chair": [
       "Prof. (Dr.) Shrddha Sagar"
@@ -198,13 +201,14 @@ export default function TeamPage() {
     ],
     "Event Organising Chair": [
       "Prof. (Dr.) Pooja Singh",
-      "Prof. Pragya Tewari"
+      "Prof. Pragya Tewari",
+      "Dr. Sonia Kukreja"
     ],
     "Conference Technical Co-Chair": [
       "Prof. (Dr.) Anupam Baliyan",
-      "Prof. (Dr.) Trapti Shrivastava",
       "Prof. (Dr.) Shipra Shukla",
-      "Prof. (Dr.) Jitendra"
+      "Dr. Aishwarya",
+      "Prof. Meenakshi Srivastava"
     ],
     "Publication Co-Chair": [
       "Prof. (Dr.) Shashi Bhusan",
@@ -227,7 +231,8 @@ export default function TeamPage() {
     ],
     "Transport Chair": [
       "Prof. (Dr.) Ganesh Kumar",
-      "Prof. (Dr.) Dinesh Kumar"
+      "Prof. (Dr.) Jitendra",
+      "Prof. Sachin Saurabh"
     ],
     "Website & Graphics Chair": [
       "Mr. Gaurang Pant",

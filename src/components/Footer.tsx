@@ -36,10 +36,10 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Important Dates</h4>
             <ul className="space-y-2 text-blue-100 text-sm">
-              <li>Paper Submission: Will update</li>
-              <li>Review Results: Will update</li>
-              <li>Final Submission: Will update</li>
-              <li>Registration: Will update</li>
+              <li>Paper Submission: 31 March 2026</li>
+              <li>Review Results: 15 April 2026</li>
+              <li>Final Submission: 30 April 2026</li>
+              <li>Registration: 20 April 2026</li>
             </ul>
           </div>
 
