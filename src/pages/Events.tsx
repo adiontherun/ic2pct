@@ -9,8 +9,14 @@ const events = [
       "Explore the cutting-edge intersection of Artificial Intelligence and real-world applications. AI Nexus brings together researchers, students, and industry experts to showcase innovations in machine learning, deep learning, and intelligent systems.",
   },
   {
+    name: "IEEE WIE Meet & Greet",
+    poster: "/wie-event.jpeg",
+    description:
+      "The Women in Engineering (WIE) Event celebrates and empowers women in technology and engineering fields. This special session features inspiring talks, panel discussions, and networking opportunities aimed at fostering diversity, inclusion, and innovation in the technical community.",
+  },
+  {
     name: "Eco Vision",
-    poster: "/eco vision.png",
+    poster: "/eco-vision.jpeg",
     description:
       "A platform dedicated to sustainable technologies and green computing. Eco Vision highlights research and ideas that drive environmental responsibility through technology, energy-efficient solutions, and smart sustainability practices.",
   },
