@@ -14,18 +14,17 @@ const ImageSlider = () => {
   const [current, setCurrent] = useState(0);
 
   const images = [
-    // "/slider/1.png",
-    // "/slider/2.png",
-    // "/slider/3.png",
-    // "/slider/4.png",
+    "/slider/1.png",
+    "/slider/2.png",
+    "/slider/3.png",
+    "/slider/4.png",
     "/slider/5.jpg",
     "/slider/6.jpg",
     "/slider/7.jpg",
     "/slider/8.jpg",
     "/slider/9.jpg",
-    "slider/10.jpg",
-    "slider/11.jpg"
-
+    "/slider/10.jpg",
+    "/slider/11.jpg",
   ];
 
   useEffect(() => {
