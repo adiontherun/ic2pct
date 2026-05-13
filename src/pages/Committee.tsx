@@ -265,10 +265,7 @@ export default function TeamPage() {
       "Prof. (Dr.) Shashi Bhusan",
       "Prof. (Dr.) Anurag Dwivedi",
     ],
-    "International Advisory Chair": [
-      "Prof. (Dr.) Anurag Dwivedi",
-      "Prof. (Dr.) Jagjit Singh Dhatterwal",
-    ],
+    "International Advisory Chair": ["Prof. (Dr.) Jagjit Singh Dhatterwal"],
     "National Advisory Chair": [
       "Prof. (Dr.) Geeta Sikka",
       "Prof. (Dr.) Abhishek Appaji",
@@ -281,8 +278,8 @@ export default function TeamPage() {
       "Mr. Om Prakash",
     ],
     "Finance Chair": ["Prof. (Dr.) Ashok K. Yadav"],
-    "Transport Chair": ["Prof. (Dr.) Ganesh Kumar", "Prof. Sachin Saurabh"],
-    "Website & Graphics Chair": ["Mr. Gaurang Pant", "Mr. Manas Saxena"],
+    "Transport Chair": ["Prof. (Dr.) T. Ganesh"],
+    "Website & Graphics Chair": ["Mr. Gaurang Pant"],
     "Media Chairs": [
       "Prof. (Dr.) Neha Jindal",
       "Mr. Durgesh",
