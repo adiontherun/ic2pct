@@ -3,14 +3,26 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 // Helper function to format title - uses existing title if present, otherwise defaults to "Professor"
-const formatTitle = (position: string | undefined, organization: string | undefined, name: string): string => {
+const formatTitle = (
+  position: string | undefined,
+  organization: string | undefined,
+  name: string,
+): string => {
   // High-priority roles that should take priority over generic "Professor"
   const highPriorityRoles = [
-    "associate dean", "assistant dean", "dean",
-    "associate director", "assistant director", "director",
-    "hod", "head of department",
-    "pro-vice chancellor", "vice chancellor", "chancellor",
-    "ceo", "president"
+    "associate dean",
+    "assistant dean",
+    "dean",
+    "associate director",
+    "assistant director",
+    "director",
+    "hod",
+    "head of department",
+    "pro-vice chancellor",
+    "vice chancellor",
+    "chancellor",
+    "ceo",
+    "president",
   ];
 
   // FIRST: Check if position has a high-priority role
@@ -31,7 +43,7 @@ const formatTitle = (position: string | undefined, organization: string | undefi
     for (const role of highPriorityRoles) {
       if (orgLower.includes(role)) {
         // Extract the title part along with department/unit from organization
-        const orgParts = organization.split(',').map(p => p.trim());
+        const orgParts = organization.split(",").map((p) => p.trim());
 
         // Find which part contains the role
         for (let i = 0; i < orgParts.length; i++) {
@@ -44,13 +56,16 @@ const formatTitle = (position: string | undefined, organization: string | undefi
               // Check if next part is a department/unit abbreviation (short name, all caps, etc.)
               if (i + 1 < orgParts.length) {
                 const nextPart = orgParts[i + 1].trim();
-                // If next part is short (likely a department code like IQAC, SCSE, etc.) 
+                // If next part is short (likely a department code like IQAC, SCSE, etc.)
                 // or contains department keywords, include it
-                if (nextPart.length <= 10 ||
+                if (
+                  nextPart.length <= 10 ||
                   /^[A-Z]{2,}$/.test(nextPart) ||
                   nextPart.toLowerCase().includes("department") ||
                   /^D[A-Z]+$/.test(nextPart) || // DAIML, DCSE, etc.
-                  /^S[A-Z]+$/.test(nextPart)) { // SCSE, SCAT, etc.
+                  /^S[A-Z]+$/.test(nextPart)
+                ) {
+                  // SCSE, SCAT, etc.
                   extractedTitle = `${orgParts[i]}, ${nextPart}`;
                 }
               }
@@ -80,8 +95,12 @@ const formatTitle = (position: string | undefined, organization: string | undefi
 
   // For people with Mr./Ms. prefix - use their position if they have one, otherwise return empty (they are not professors)
   const nameLower = name.toLowerCase();
-  if (nameLower.startsWith("mr.") || nameLower.startsWith("ms.") ||
-    nameLower.startsWith("shri") || nameLower.startsWith("smt.")) {
+  if (
+    nameLower.startsWith("mr.") ||
+    nameLower.startsWith("ms.") ||
+    nameLower.startsWith("shri") ||
+    nameLower.startsWith("smt.")
+  ) {
     // If they have a specific position, use that
     if (position && position.trim() !== "") {
       return position;
@@ -94,17 +113,26 @@ const formatTitle = (position: string | undefined, organization: string | undefi
 };
 
 // Helper function to format affiliation - removes redundancy with title
-const formatAffiliation = (organization: string | undefined, position: string | undefined, displayedTitle: string): string => {
+const formatAffiliation = (
+  organization: string | undefined,
+  position: string | undefined,
+  displayedTitle: string,
+): string => {
   if (!organization) return "";
 
   // Split the organization into parts
-  const orgParts = organization.split(',').map(p => p.trim());
+  const orgParts = organization.split(",").map((p) => p.trim());
 
   // Get words/phrases from the displayed title (for comparison)
-  const titleWords = displayedTitle ? displayedTitle.toLowerCase().split(/[,\s]+/).filter(w => w.length > 1) : [];
+  const titleWords = displayedTitle
+    ? displayedTitle
+        .toLowerCase()
+        .split(/[,\s]+/)
+        .filter((w) => w.length > 1)
+    : [];
 
   // Filter out parts that are already in the title
-  const filteredParts = orgParts.filter(part => {
+  const filteredParts = orgParts.filter((part) => {
     const partLower = part.toLowerCase();
 
     // Check if this part (or significant portion of it) appears in the title
@@ -112,17 +140,28 @@ const formatAffiliation = (organization: string | undefined, position: string | 
       if (titleWord.length > 2 && partLower.includes(titleWord)) {
         return false; // Skip this part
       }
-      if (partLower.length > 2 && displayedTitle.toLowerCase().includes(partLower)) {
+      if (
+        partLower.length > 2 &&
+        displayedTitle.toLowerCase().includes(partLower)
+      ) {
         return false; // Skip this part
       }
     }
 
     // Also remove common title prefixes
     const titlesToRemove = [
-      'professor', 'prof.', 'associate professor', 'assistant professor',
-      'dean', 'associate dean', 'assistant dean',
-      'director', 'associate director', 'assistant director',
-      'hod', 'head of department'
+      "professor",
+      "prof.",
+      "associate professor",
+      "assistant professor",
+      "dean",
+      "associate dean",
+      "assistant dean",
+      "director",
+      "associate director",
+      "assistant director",
+      "hod",
+      "head of department",
     ];
 
     for (const title of titlesToRemove) {
@@ -132,9 +171,28 @@ const formatAffiliation = (organization: string | undefined, position: string | 
     }
 
     // Remove department codes if they're in the title
-    const deptCodes = ['IQAC', 'SCSE', 'SCAT', 'DCSE', 'DAIML', 'DAIDS', 'DCYS', 'SAI', 'SOHT', 'SMCS', 'DOME', 'DOCE', 'DEECE', 'GSCALE', 'APR'];
+    const deptCodes = [
+      "IQAC",
+      "SCSE",
+      "SCAT",
+      "DCSE",
+      "DAIML",
+      "DAIDS",
+      "DCYS",
+      "SAI",
+      "SOHT",
+      "SMCS",
+      "DOME",
+      "DOCE",
+      "DEECE",
+      "GSCALE",
+      "APR",
+    ];
     for (const code of deptCodes) {
-      if (displayedTitle.toUpperCase().includes(code) && part.toUpperCase().includes(code)) {
+      if (
+        displayedTitle.toUpperCase().includes(code) &&
+        part.toUpperCase().includes(code)
+      ) {
         return false;
       }
     }
@@ -142,53 +200,47 @@ const formatAffiliation = (organization: string | undefined, position: string | 
     return true;
   });
 
-  return filteredParts.join(', ').trim();
+  return filteredParts.join(", ").trim();
 };
 
 export default function TeamPage() {
   const roles = {
-    "Chief Patron": [
-      "Shri Suneel Galgotia"
-    ],
-    "Patron": [
+    "Chief Patron": ["Shri Suneel Galgotia"],
+    Patron: [
       "Dr. Dhruv Galgotia",
       "Ms. Aradhana Galgotia",
       // "Dr. Ankush Mittal",
       "Prof. (Dr.) S.N.Singh",
-      "Prof. (Dr.) K.M. Babu"
+      "Prof. (Dr.) K.M. Babu",
     ],
     "Conference General Chair": [
       "Prof. (Dr.) Avadhesh Kumar",
       "Prof. (Dr.) Yogesh S. Chauhan",
-      "Dr. Arnold Pears"
+      "Dr. Arnold Pears",
     ],
     "Conference Chair": [
       "Prof. (Dr.) Aanjey M. Tripathi",
-      "Prof. (Dr.) Kuldeep S. Kaswan"
+      "Prof. (Dr.) Kuldeep S. Kaswan",
     ],
     "Conference Organizing Chair": [
       "Prof. (Dr.) Harish Kumar GR",
       "Prof. (Dr.) Abdul Aleem",
       "Prof. (Dr.) Gaurav Agarwal",
       "Prof. Manish Kumar",
-      "Prof. Arpesh Singh"
+      "Prof. Arpesh Singh",
     ],
-    "Conference Co-Organizing Chair": [
-      "Prof. (Dr.) Sunil Bharti"
-    ],
+    "Conference Co-Organizing Chair": ["Prof. (Dr.) Sunil Bharti"],
     "Technical Program Committee Chair": [
       "Prof. (Dr.) Vineeta Khemchandani",
-      // "Prof. (Dr.) Sudhir Kr. Singh",
-      // "Prof. (Dr.) Deepak Soni",
+      "Prof. (Dr.) Sudhir Kr. Singh",
+      "Prof. (Dr.) Deepak Soni",
       "Prof. (Dr.) Sonia Setia",
-      "Prof. (Dr.) Trapti Shrivastava"
+      "Prof. (Dr.) Trapti Shrivastava",
     ],
-    "Publication Chair": [
-      "Prof. (Dr.) Shrddha Sagar"
-    ],
+    "Publication Chair": ["Prof. (Dr.) Shrddha Sagar"],
     "Publicity Chair": [
       "Prof. (Dr.) Meenakshi Sharma",
-      "Prof. (Dr.) Ravi Sharma"
+      "Prof. (Dr.) Ravi Sharma",
     ],
     "Conference Secretary": [
       "Prof. (Dr.) Manish Raj",
@@ -196,52 +248,50 @@ export default function TeamPage() {
       "Prof. (Dr.) Saurabh Singh",
       "Prof. (Dr.) K. K. Agrawal",
       "Prof. (Dr.) Shachi Mall",
-      "Prof. Arunendra Mani Tripathi"
+      "Prof. Arunendra Mani Tripathi",
     ],
     "Event Organising Chair": [
       "Prof. (Dr.) Pooja Singh",
       "Prof. Pragya Tewari",
-      "Dr. Sonia Kukreja"
     ],
-    "Conference Technical Co-Chair": [
+    "Conference Technical Co-Chairs": [
       "Prof. (Dr.) Anupam Baliyan",
       "Prof. (Dr.) Shipra Shukla",
-      "Prof. Aishwarya",
-      "Prof. Meenakshi Srivastava"
+      "Prof. (Dr.) Jitendra",
+      "Prof. Sachin Saurabh",
+      "Prof. Meenakshi Srivastava",
     ],
-    "Publication Co-Chair": [
+    "Publication Co-Chairs": [
       "Prof. (Dr.) Shashi Bhusan",
-      "Prof. (Dr.) Vipin Rai"
+      "Prof. (Dr.) Anurag Dwivedi",
     ],
     "International Advisory Chair": [
       "Prof. (Dr.) Anurag Dwivedi",
-      "Prof. (Dr.) Jagjit Singh Dhatterwal"
+      "Prof. (Dr.) Jagjit Singh Dhatterwal",
     ],
     "National Advisory Chair": [
       "Prof. (Dr.) Geeta Sikka",
       "Prof. (Dr.) Abhishek Appaji",
-      "Prof. (Dr.) Harivardhagini Subhadra"
+      "Prof. (Dr.) Harivardhagini Subhadra",
     ],
     "Sponsorship & Industry Chair": [
-      "Prof. (Dr.) Avneesh Kumar"
+      "Dr. Sonia Kukreja",
+      "Prof. Aishwarya",
+      "Mr. Shishant Chauhan",
+      "Mr. Om Prakash",
     ],
-    "Finance Chair": [
-      "Prof. (Dr.) Ashok K. Yadav"
+    "Finance Chair": ["Prof. (Dr.) Ashok K. Yadav"],
+    "Transport Chair": ["Prof. (Dr.) Ganesh Kumar", "Prof. Sachin Saurabh"],
+    "Website & Graphics Chair": ["Mr. Gaurang Pant", "Mr. Manas Saxena"],
+    "Media Chairs": [
+      "Prof. (Dr.) Neha Jindal",
+      "Mr. Durgesh",
+      "Mr. M.D. Ansari",
     ],
-    "Transport Chair": [
-      "Prof. (Dr.) Ganesh Kumar",
-      "Prof. (Dr.) Jitendra",
-      "Prof. Sachin Saurabh"
-    ],
-    "Website & Graphics Chair": [
-      "Mr. Gaurang Pant",
-      "Mr. Manas Saxena"
-    ],
-    "Media Chair": [
-      "Prof. (Dr.) Neha Jindal"
-    ],
-    "Hospitality Chair": [
-      "Prof. (Dr.) Shankar Kumar"
+    "Hospitality Chairs": [
+      "Prof. (Dr.) Shankar Kumar",
+      "Mr. Vikash Jha",
+      "Mr. Nitin Varshney",
     ],
     "International Advisory Committee": [
       "Dr. Liudong Xing",
@@ -273,7 +323,7 @@ export default function TeamPage() {
       "Prof. Ts. Dr. Murali Raman",
       "Dr. Ahmed A. Elngar",
       "Dr. Hironori Washizaki",
-      "Dr. Supavadee Aramvith"
+      "Dr. Supavadee Aramvith",
     ],
     "National Advisory Committee": [
       "Prof. Adarsh Anand",
@@ -337,18 +387,22 @@ export default function TeamPage() {
       "Dr. Anil Kumar Tripathi",
       "Dr. Prabhakar Tiwari",
       "Dr. Rakesh Kumar",
-      "Prof. (Dr.) Meenakshi Awasthi"
-    ]
+      "Prof. (Dr.) Meenakshi Awasthi",
+    ],
   };
 
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
       <div className="py-10 px-4">
-        <h1 className="text-center text-gray-900 text-4xl font-bold mb-8">Our Team</h1>
+        <h1 className="text-center text-gray-900 text-4xl font-bold mb-8">
+          Our Team
+        </h1>
         {Object.entries(roles).map(([role, names]) => (
           <div key={role} className="mb-8">
-            <h2 className="text-2xl text-gray-800 font-bold text-center mb-4">{role}</h2>
+            <h2 className="text-2xl text-gray-800 font-bold text-center mb-4">
+              {role}
+            </h2>
             <div className="flex flex-wrap justify-center gap-6">
               {names.map((name) => {
                 const chair = cards.find((chair) => chair.name === name);
@@ -366,15 +420,25 @@ export default function TeamPage() {
                         />
                       ) : (
                         <img
-                          src='/reshot-icon-user-ZXFJAEQURK.svg'
+                          src="/reshot-icon-user-ZXFJAEQURK.svg"
                           alt={name}
                           className="w-32 h-32 p-5 mx-auto rounded-full border-4 border-white shadow-md invert"
                         />
                       )}
-                      <h2 className="text-xl font-bold mt-4 text-white">{name}</h2>
+                      <h2 className="text-xl font-bold mt-4 text-white">
+                        {name}
+                      </h2>
                       {(() => {
-                        const title = formatTitle(chair.position, chair.organization, name);
-                        const affiliation = formatAffiliation(chair.organization, chair.position, title);
+                        const title = formatTitle(
+                          chair.position,
+                          chair.organization,
+                          name,
+                        );
+                        const affiliation = formatAffiliation(
+                          chair.organization,
+                          chair.position,
+                          title,
+                        );
                         return (
                           <>
                             {title && (
