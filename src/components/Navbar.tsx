@@ -4,12 +4,23 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
+interface NavItem {
+  name: string;
+  path?: string;
+  dropdown?: {
+    name: string;
+    path: string;
+    external?: boolean;
+  }[];
+  disabled?: boolean;
+  navPathPrefix?: string;
+}
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  // const [isCommitteeDropdownOpen, setIsCommitteeDropdownOpen] = useState(false); // Removed unused state
   const location = useLocation();
 
-  const navItems = [
+  const navItems: NavItem[] = [
     { name: "Home", path: "/" },
     { name: "Registration", path: "/registration" },
     { name: "Committee", path: "/committee" },
@@ -28,6 +39,7 @@ const Navbar = () => {
       name: "Schedule",
       dropdown: [
         { name: "Technical Session", path: "/schedule/technical-session" },
+        { name: "Event Schedule", path: "/schedule/event-schedule" },
         { name: "Keynote Schedule", path: "/schedule/keynote" },
         { name: "Inauguration Ceremony", path: "/schedule/inauguration" },
         { name: "Valedictory Ceremony", path: "/schedule/valedictory" }

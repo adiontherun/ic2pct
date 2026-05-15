@@ -2,8 +2,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { FileText, Download } from "lucide-react";
 
-const KeynoteSchedule = () => {
-  const pdfUrl = "/Keynote - IC2PCT2026.pdf";
+const EventSchedule = () => {
+  const pdfUrl = "/Day 1 Event Schedule- IC2PCT2026.pdf";
+  const title = "Event Schedule — Day 1, May 15";
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
@@ -12,9 +13,9 @@ const KeynoteSchedule = () => {
       {/* Hero Header */}
       <div className="bg-blue-900 text-white py-12">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold mb-3">Keynote Schedule</h1>
+          <h1 className="text-4xl font-bold mb-3">Event Schedule</h1>
           <p className="text-lg text-blue-200">
-            IC2PCT-2026 — Keynote Sessions, May 15–17
+            IC2PCT-2026 — Detailed Event Plan
           </p>
         </div>
       </div>
@@ -27,7 +28,7 @@ const KeynoteSchedule = () => {
             <div className="flex items-center gap-3">
               <FileText className="h-6 w-6 text-blue-700" />
               <span className="text-blue-900 font-semibold text-lg">
-                Keynote Schedule — IC2PCT 2026
+                {title}
               </span>
             </div>
             <a
@@ -44,7 +45,7 @@ const KeynoteSchedule = () => {
           <div className="w-full rounded-xl overflow-hidden border-2 border-blue-200 shadow-lg" style={{ height: "80vh" }}>
             <iframe
               src={pdfUrl}
-              title="Keynote Schedule - IC2PCT 2026"
+              title={title}
               className="w-full h-full"
               style={{ border: "none" }}
             />
@@ -70,4 +71,4 @@ const KeynoteSchedule = () => {
   );
 };
 
-export default KeynoteSchedule;
+export default EventSchedule;

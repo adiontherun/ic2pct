@@ -20,6 +20,7 @@ import KeynoteSchedule from "./pages/Schedule/Keynote";
 import TechnicalSessionSchedule from "./pages/Schedule/TechnicalSession";
 import InaugurationSchedule from "./pages/Schedule/Inauguration";
 import ValedictorySchedule from "./pages/Schedule/Valedictory";
+import EventSchedule from "./pages/Schedule/EventSchedule";
 import BestPaperAward from "./pages/Awards/BestPaper";
 import YoungResearcherAward from "./pages/Awards/YoungResearcher";
 import Guidelines from "./pages/Guidelines";
@@ -53,6 +54,7 @@ const App = () => (
           <Route path="/schedule/technical-session" element={<TechnicalSessionSchedule />} />
           <Route path="/schedule/inauguration" element={<InaugurationSchedule />} />
           <Route path="/schedule/valedictory" element={<ValedictorySchedule />} />
+          <Route path="/schedule/event-schedule" element={<EventSchedule />} />
           <Route path="/awards/best-paper" element={<BestPaperAward />} />
           <Route path="/awards/young-researcher" element={<YoungResearcherAward />} />
           <Route path="/guidelines" element={<Guidelines />} />

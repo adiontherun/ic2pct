@@ -7,17 +7,17 @@ const days = [
   {
     label: "Day 1 — May 15",
     title: "Session Schedule — Day 1, May 15",
-    pdfUrl: "/Author Schedule - May 15 - IC2PCT2026.pdf",
+    pdfUrl: "/Technical Session Schedule - IC2PCT2026 - 15_May.pdf",
   },
   {
     label: "Day 2 — May 16",
     title: "Session Schedule — Day 2, May 16",
-    pdfUrl: "/Author Schedule - May 16 - IC2PCT2026.pdf",
+    pdfUrl: "/Technical Session Schedule - IC2PCT2026 - 16_May.pdf",
   },
   {
     label: "Day 3 — May 17",
     title: "Session Schedule — Day 3, May 17",
-    pdfUrl: "/Technical Session - IC2PCT2026.pdf",
+    pdfUrl: "/Technical Session Schedule - IC2PCT2026 - 17_May.pdf",
   },
 ];
 
@@ -48,11 +48,10 @@ const TechnicalSessionSchedule = () => {
               <button
                 key={day.label}
                 onClick={() => setActiveTab(idx)}
-                className={`flex-1 py-3 text-sm sm:text-base font-semibold transition-colors ${
-                  activeTab === idx
+                className={`flex-1 py-3 text-sm sm:text-base font-semibold transition-colors ${activeTab === idx
                     ? "bg-blue-900 text-white"
                     : "bg-blue-50 text-blue-900 hover:bg-blue-100"
-                }`}
+                  }`}
               >
                 {day.label}
               </button>

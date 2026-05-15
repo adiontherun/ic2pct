@@ -279,7 +279,7 @@ export default function TeamPage() {
     ],
     "Finance Chair": ["Prof. (Dr.) Ashok K. Yadav"],
     "Transport Chair": ["Prof. (Dr.) T. Ganesh"],
-    "Website & Graphics Chair": ["Mr. Gaurang Pant"],
+    "Website & Graphics Chair": ["Mr. Gaurang Pant", "Mr. Manas Saxena"],
     "Media Chairs": [
       "Prof. (Dr.) Neha Jindal",
       "Mr. Durgesh",
