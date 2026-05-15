@@ -94,10 +94,10 @@ export const cards = [
     imgSrc: "/ImportantPersons/gauravagarwal.jpeg",
   },
   {
-    name: "Prof. Manish Kumar",
-    position: "",
+    name: "Prof. (Dr.) Manish Kumar",
+    position: "Professor",
     organization: "Galgotias University, Greater Noida, India",
-    imgSrc: "/ImportantPersons/manish kumar.jpeg",
+    imgSrc: "/ImportantPersons/Prof. (Dr.) Manish Kumar.jpeg",
   },
   {
     name: "Prof. Arpesh Singh",
@@ -287,10 +287,10 @@ export const cards = [
     imgSrc: "/ImportantPersons/ashokkryadav.jpg",
   },
   {
-    name: "Prof. (Dr.) Ganesh Kumar",
-    position: "",
+    name: "Prof. (Dr.) T. Ganesh",
+    position: "Professor",
     organization: "Galgotias University, Greater Noida, India",
-    imgSrc: "/ImportantPersons/T ganesh.png",
+    imgSrc: "/ImportantPersons/Prof. (Dr.) T. Ganesh.jpeg",
   },
   {
     name: "Prof. (Dr.) Dinesh Kumar",
@@ -380,7 +380,7 @@ export const cards = [
     name: "Dr. Manish Kumar",
     position: "",
     organization: "Galgotias University, India",
-    imgSrc: "/ImportantPersons/manish kumar.jpeg",
+    imgSrc: "/ImportantPersons/Prof. (Dr.) Manish Kumar.jpeg",
   },
   {
     name: "Dr. Sonu Jha",
@@ -425,10 +425,10 @@ export const cards = [
     imgSrc: null,
   },
   {
-    name: "Prof. T. Ganesh Kumar",
-    position: "",
+    name: "Prof. (Dr.) T. Ganesh",
+    position: "Professor",
     organization: "Galgotias University, India",
-    imgSrc: "/ImportantPersons/T ganesh.png",
+    imgSrc: "/ImportantPersons/Prof. (Dr.) T. Ganesh.jpeg",
   },
   {
     name: "Prof. AR Pandey",
