@@ -221,12 +221,12 @@ export default function TeamPage() {
     "Conference Chair": [
       "Prof. (Dr.) Aanjey M. Tripathi",
       "Prof. (Dr.) Kuldeep S. Kaswan",
+      "Prof. (Dr.) Manish Kumar",
     ],
     "Conference Organizing Chair": [
       "Prof. (Dr.) Harish Kumar GR",
       "Prof. (Dr.) Abdul Aleem",
       "Prof. (Dr.) Gaurav Agarwal",
-      "Prof. Manish Kumar",
       "Prof. Arpesh Singh",
     ],
     "Conference Co-Organizing Chair": ["Prof. (Dr.) Sunil Bharti"],
