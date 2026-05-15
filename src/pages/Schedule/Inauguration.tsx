@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { FileText, Download } from "lucide-react";
 
 const InaugurationSchedule = () => {
-  const pdfUrl = "/Inaguration Schedule - IC2PCT2026 - May 16.pdf";
+  const pdfUrl = "/Inaugration - IC2PCT2026.pdf";
 
   return (
     <div className="min-h-screen bg-white flex flex-col">

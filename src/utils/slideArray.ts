@@ -290,7 +290,7 @@ export const cards = [
     name: "Prof. (Dr.) T. Ganesh",
     position: "Professor",
     organization: "Galgotias University, Greater Noida, India",
-    imgSrc: "/ImportantPersons/Prof. (Dr.) T. Ganesh.jpeg",
+    imgSrc: "ImportantPersons/Prof. (Dr.) T. Ganesh.jpeg",
   },
   {
     name: "Prof. (Dr.) Dinesh Kumar",
@@ -428,7 +428,7 @@ export const cards = [
     name: "Prof. (Dr.) T. Ganesh",
     position: "Professor",
     organization: "Galgotias University, India",
-    imgSrc: "/ImportantPersons/Prof. (Dr.) T. Ganesh.jpeg",
+    imgSrc: "",
   },
   {
     name: "Prof. AR Pandey",
@@ -1152,13 +1152,13 @@ export const cards = [
     name: "Mr. Shishant Chauhan",
     position: "",
     organization: "Galgotias University, Greater Noida, India",
-    imgSrc: "",
+    imgSrc: "/ImportantPersons/Mr. Shishant Chauhan.jpeg",
   },
   {
     name: "Mr. Om Prakash",
     position: "",
     organization: "Galgotias University, Greater Noida, India",
-    imgSrc: "",
+    imgSrc: "/ImportantPersons/Mr. Om Prakash.jpeg",
   },
   {
     name: "Prof. (Dr.) Anurag Dwivedi",
